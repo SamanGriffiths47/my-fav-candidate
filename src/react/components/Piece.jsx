@@ -2,17 +2,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { mouseIn, mouseOut } from '../../redux/actions/themeActions'
 
-const mapStateToProps = ({ themeState }) => {
-  return { themeState }
-}
-const mapActionsToProps = (dispatch) => {
-  return {
-    initMouseIn: () => dispatch(mouseIn()),
-    initMouseOut: () => dispatch(mouseOut())
-  }
-}
-
-function Piece (props){
+export default function Piece (props){
   const piece = props.piece
   const imgalt = `${piece.name} Screenshot`
   const linkto = `/${piece.link}`
@@ -37,5 +27,3 @@ function Piece (props){
     </div>
   )
 }
-
-export default connect(mapStateToProps, mapActionsToProps)(Piece)

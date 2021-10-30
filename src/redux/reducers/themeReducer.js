@@ -195,9 +195,9 @@ const iState = {
       position: 'absolute',
       zIndex: 1,
       width: '35vw',
-      height: '20.5vw',
+      height: '20.25vw',
       fontSize: '2vw',
-      marginTop: '5.5vw',
+      marginTop: '5.45vw',
       backgroundColor: 'rgba(0, 0, 0, 0.7)',
       opacity: 0
     },
@@ -465,30 +465,6 @@ export default function themeReducer(state = iState, action) {
       return { ...state, theme: action.payload }
     case DARK_MODE:
       return { ...state, theme: action.payload }
-    case MOUSE_IN:
-      return {
-        ...state,
-        darkMode: {
-          ...state.darkMode,
-          linkSec: { ...state.darkMode.linkSec, opacity: 1 }
-        },
-        lightMode: {
-          ...state.lightMode,
-          linkSec: { ...state.lightMode.linkSec, opacity: 1 }
-        }
-      }
-    case MOUSE_OUT:
-      return {
-        ...state,
-        darkMode: {
-          ...state.darkMode,
-          linkSec: { ...state.darkMode.linkSec, opacity: 0 }
-        },
-        lightMode: {
-          ...state.lightMode,
-          linkSec: { ...state.lightMode.linkSec, opacity: 0 }
-        }
-      }
     default:
       return { ...state }
   }
