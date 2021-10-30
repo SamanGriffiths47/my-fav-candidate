@@ -3,10 +3,13 @@ body {
   padding: 0;
   height: '100vh';
   width: '100vw';
+  font-family: Comic Sans MS, Comic Sans, cursive;
+  -webkit-text-stroke-color: white;
 }
 #root {
   margin: 0;
   padding: 0;
   height: '100vh';
   width: '100vw';
+  /* background-color: rgb(170, 115, 43); */
 }
