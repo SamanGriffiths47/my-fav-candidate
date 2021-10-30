@@ -1,4 +1,4 @@
-import { LIGHT_MODE, DARK_MODE } from '../types'
+import { LIGHT_MODE, DARK_MODE, MOUSE_IN, MOUSE_OUT } from '../types'
 import reggie from '../../images/stargif.mp4'
 import negative from '../../images/stargif_neg.mp4'
 import sunIcon from '../../images/sunIcon.png'
@@ -198,7 +198,8 @@ const iState = {
       height: '20.5vw',
       fontSize: '2vw',
       marginTop: '5.5vw',
-      backgroundColor: 'rgba(0, 0, 0, 0.7)'
+      backgroundColor: 'rgba(0, 0, 0, 0.7)',
+      opacity: 0
     },
 
     // Animation Container
@@ -421,7 +422,8 @@ const iState = {
       height: '20.5vw',
       fontSize: '2vw',
       marginTop: '5.5vw',
-      backgroundColor: 'rgba(0, 0, 0, 0.7)'
+      backgroundColor: 'rgba(0, 0, 0, 0.7)',
+      opacity: 0
     },
 
     // Animation Container
@@ -463,6 +465,30 @@ export default function themeReducer(state = iState, action) {
       return { ...state, theme: action.payload }
     case DARK_MODE:
       return { ...state, theme: action.payload }
+    case MOUSE_IN:
+      return {
+        ...state,
+        darkMode: {
+          ...state.darkMode,
+          linkSec: { ...state.darkMode.linkSec, opacity: 1 }
+        },
+        lightMode: {
+          ...state.lightMode,
+          linkSec: { ...state.lightMode.linkSec, opacity: 1 }
+        }
+      }
+    case MOUSE_OUT:
+      return {
+        ...state,
+        darkMode: {
+          ...state.darkMode,
+          linkSec: { ...state.darkMode.linkSec, opacity: 0 }
+        },
+        lightMode: {
+          ...state.lightMode,
+          linkSec: { ...state.lightMode.linkSec, opacity: 0 }
+        }
+      }
     default:
       return { ...state }
   }
