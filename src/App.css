@@ -1,15 +1,204 @@
+/* Page Level */
 body {
   margin: 0;
-  padding: 0;
-  height: '100vh';
-  width: '100vw';
   font-family: Comic Sans MS, Comic Sans, cursive;
   -webkit-text-stroke-color: white;
 }
-#root {
+* {
+  transition: 0.5s;
+}
+#appDiv {
+  height: 100vh;
+  width: 100vw;
+}
+main {
+  flex-direction: column;
+  position: absolute;
+  overflow-y: scroll;
+  display: flex;
+  color: white;
+  width: 100%;
+  height: 92%;
+  z-index: 1;
+}
+#background {
+  grid-template: 50% 50% / 50% 50%;
+  display: grid;
+  height: 92%;
+  width: 100%;
+}
+video {
+  object-fit: fill;
+  height: 100.1%;
+  width: 100%;
+}
+a {
+  color: white;
+  transition: 0s;
+}
+a:hover {
+  text-shadow: 0 0 4vh var(--aShadow);
+  color: var(--aHover);
+}
+a:active {
+  text-shadow: 0 0 4vh var(--aShadow);
+  color: var(--aActive);
+}
+
+/* Nav Bar */
+nav {
+  box-shadow: var(--navBxShdw);
+  background: var(--navBckgrnd);
+  justify-content: space-between;
+  padding: 0 8vw;
+  align-items: center;
+  display: flex;
+  height: 8%;
+}
+
+/* Theme Slider */
+#btnSec {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 30%;
+  height: 4vh;
+}
+#btnSlider {
+  height: 2vh;
+}
+#iconBtn {
+  box-shadow: var(--iconBxShdw);
+  margin: var(--iconMargin);
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  background-color: rgba(0, 0, 0 0);
+  border-radius: 999px;
+  align-items: center;
+  border: none;
+  height: 2vh;
+}
+#iconBtn > * {
+  position: inherit;
+  cursor: pointer;
+}
+#moon {
+  height: 4vh;
+  opacity: var(--moonOp);
+}
+#sun {
+  height: 4vh;
+  opacity: var(--sunOp);
+}
+#ray {
+  height: var(--rayH);
+  margin-bottom: 0.2vh;
+}
+
+/* Project Display */
+.pRowR {
+  justify-content: space-between;
+  padding: 5vw 0 5vw 5vw;
+  display: flex;
+  min-height: 44vw;
+  width: 85vw;
+}
+.pRowL {
+  justify-content: space-between;
+  padding: 5vw 5vw 0 5vw;
+  display: flex;
+  min-height: 44vw;
+  width: 85vw;
+}
+
+/* Project Piece */
+.pieceCont {
+  padding: 0 3vw 3vw 3vw;
+  display: grid;
+  grid-template: 20% 80% / 1fr;
+  height: 32vw;
+  width: 50vw;
+  box-shadow: var(--pieceBxShdw);
+  background: var(--pieceBckgrnd);
+  text-align: center;
+}
+.imgTitle {
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke: 0.15vw;
+  /* margin-bottom: 1vw;
+  margin-top: 1vw; */
   margin: 0;
-  padding: 0;
-  height: '100vh';
-  width: '100vw';
-  /* background-color: rgb(170, 115, 43); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5vw;
+  color: white;
+  height: 100%;
+  width: 100%;
+  grid-area: 1/1/2/2;
+}
+.pieceImg {
+  grid-area: 2/1/3/2;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template: 1fr / 1fr;
+}
+.pieceImg > img {
+  grid-area: 1/1/2/2;
+  height: 90%;
+  width: 100%;
+}
+.linkDiv {
+  height: 90%;
+  width: 100%;
+  font-size: 2vw;
+  position: relative;
+  grid-area: 1/1/2/2;
+  /* margin-top: -26vw; */
+}
+.linkDiv > section {
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: 0s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: inherit;
+  position: absolute;
+  z-index: 3;
+}
+.linkDiv > section > a {
+  pointer-events: none;
+}
+
+/* Piece Animation */
+.aniImg {
+  height: 18vw;
+  width: 18vw;
+  box-shadow: var(--aniImgBxShdw);
+}
+.aniDivR {
+  align-self: flex-end;
+  margin: 0vw 0 0 5vw;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 22vw;
+  width: 22vw;
+  background: var(--aniDivBckgrnd);
+  box-shadow: var(--aniDivBxShdw);
+}
+.aniDivL {
+  align-self: flex-end;
+  margin: 0 5vw 0 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 22vw;
+  width: 22vw;
+  box-shadow: var(--aniDivBxShdw);
+  background: var(--aniDivBckgrnd);
 }

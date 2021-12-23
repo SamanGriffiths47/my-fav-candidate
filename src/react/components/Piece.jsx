@@ -1,28 +1,63 @@
-import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
-import { mouseIn, mouseOut } from '../../redux/actions/themeActions'
-
 export default function Piece (props){
   const piece = props.piece
   const imgalt = `${piece.name} Screenshot`
-  const linkto = `/${piece.link}`
-  const linkid = `${piece.link}Link`
 
-  function mouseIn(e){
-    e.target.style.opacity = 1
+  function mouseOver(e){
+    if (e.target.tagName === 'SECTION') {
+      e.target.style.opacity = 1
+    } else if (e.target.tagName ==='A') {
+      e.target.parentElement.style.opacity = 1
+    }
   }
   function mouseOut(e){
-    e.target.style.opacity = 0
+    if (e.target.tagName === 'SECTION') {
+      e.target.style.opacity = 0
+    }
   }
 
   return(
-    <div style={props.styles.ssContainer}>
-      <h1 style={props.styles.ssTitle}>{piece.name}</h1>
-      <section style={props.styles.screenshot} className='imgSec'>
-        <img style={{width: "100%", height: "100%"}} src={piece.img} alt={imgalt} />
+    <div className='pieceCont'>
+      <h1 className="imgTitle">{piece.name}</h1>
+      <section className='pieceImg'>
+        <img src={piece.img} alt={imgalt} />
+        <div className='linkDiv'>
+          <section onMouseOver={mouseOver} onMouseOut={mouseOut} >
+            <a href={piece.link} target='_blank'>More Info Here</a>
+          </section>
+        </div>
       </section>
-      <section style={props.styles.linkSec} onMouseEnter={mouseIn} onMouseLeave={mouseOut} >
-        <Link style={props.styles.aTag} to={linkto} id={linkid}>More Info Here</Link>
+    </div>
+  )
+}
+
+export function PieceMobile (props){
+  const piece = props.piece
+  const imgalt = `${piece.name} Screenshot`
+
+  function onClick(e){
+    if (e.target.tagName === 'SECTION') {
+      if(e.target.style.opacity === '0' || !e.target.style.opacity){
+        e.target.style.opacity = '1'
+        e.target.children[0].style.pointerEvents='all'
+      }else{
+        e.target.style.opacity = '0'
+      }
+    }
+  }
+  // function onBlur(e){
+  //   e.target.style.opacity = 1
+  // }
+
+  return(
+    <div className='pieceCont'>
+      <h1 className="imgTitle">{piece.name}</h1>
+      <section className='pieceImg'>
+        <img src={piece.img} alt={imgalt} />
+      <div className='linkDiv'>
+        <section onClick={onClick}>
+        <a href={piece.link} target='_blank' >More Info Here</a>
+        </section>
+      </div>
       </section>
     </div>
   )

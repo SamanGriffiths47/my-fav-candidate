@@ -25,16 +25,24 @@ function Nav(props){
     : props.initLightMode()
   }
   return(
-    <nav id="navbar" style={props.styles.nav}>
-      <Link to="/" id="navHome" style={props.styles.aTag}>
-        Home
-      </Link>
-      <section style={props.styles.btnSec}>
-        <img style={props.styles.btnSlider} src={props.styles.btnSliderSrc} alt="Button Slider"/>
-        <button style={props.styles.btn} onClick={themeToggle} >
-          <img style = {props.styles.ray} src={sunRays} alt="Sun Rays" />
-          <img style={props.styles.sunIcon} src={sunIcon} alt="Theme Icon"/>
-          <img style={props.styles.moonIcon} src={moonIcon} alt="Theme Icon"/>
+    <nav id="navbar">
+      <section id='linkSec'>
+        <Link to="/" id="navHome">
+          Home
+        </Link>
+        <Link to="/projects" id="navProjects">
+          Projects
+        </Link>
+        <a href="https://www.linkedin.com/in/saman-griffiths/" target="_blank" id="navContact">
+          ContactMe
+        </a>
+      </section>
+      <section id='btnSec'>
+        <img id='btnSlider' src={props.styles.btnSliderSrc} alt="Button Slider"/>
+        <button onClick={themeToggle} id='iconBtn'>
+          <img id='ray' src={sunRays} alt="Sun Rays" />
+          <img id='sun' src={sunIcon} alt="Theme Icon"/>
+          <img id='moon' src={moonIcon} alt="Theme Icon"/>
         </button>
       </section>
     </nav>

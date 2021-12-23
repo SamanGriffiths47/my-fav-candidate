@@ -1,13 +1,13 @@
 import './App.css'
 import Nav from './react/components/Nav'
-import Animation from './react/components/Animation'
 import AjScreenshot from './images/asteroidJuggler.png'
 import AjAni from './images/aj.png'
 import TttScreenshot from './images/tickTacToe.png'
 import TttAni from './images/ttt.png'
-import Piece from './react/components/Piece'
 import { connect } from 'react-redux'
-import { useEffect } from 'react'
+import Projects from './react/pages/Projects'
+import { Route } from 'react-router-dom'
+import Home from './react/pages/Home'
 
 const mapStateToProps = ({ themeState }) => {
   return { themeState }
@@ -19,69 +19,52 @@ function App(props) {
     : props.themeState.darkMode
   const bckgrndVid = styles.backgroundVid
 
-  function pieceObj(name, img, link, animation, desc) {
-    const obj = {
-      name: name,
-      img: img,
-      link: link,
-      animation: animation,
-      desc: desc
+  class Project {
+    constructor(name, img, animation, aniAlt, link) {
+      this.name = name
+      this.img = img
+      this.animation = animation
+      this.aniAlt = aniAlt
+      this.link = link
     }
-    return obj
   }
 
-  const asteroidJuggler = pieceObj(
+  const asteroidJuggler = new Project(
     'Asteroid Juggler',
     AjScreenshot,
-    'asteroid-juggler',
     AjAni,
-    'Animation of Me In Space'
+    'Animation of Me In Space',
+    'https://github.com/SamanGriffiths47/Asteroid_Juggler'
   )
-  const tickTacToe = pieceObj(
+
+  const tickTacToe = new Project(
     'Tick Tac Toe',
     TttScreenshot,
-    'tick-tac-toe',
     TttAni,
-    'Animation of Me Playing Tic Tac Toe'
+    'Animation of Me Playing Tic Tac Toe',
+    'https://github.com/SamanGriffiths47/Tick-Tac-Toe',
+    ''
   )
 
   const pieces = [asteroidJuggler, tickTacToe]
 
   return (
-    <div style={styles.appDiv}>
-      <main style={styles.main}>
-        <Nav styles={styles} />
-        {pieces.map((piece, i) => {
-          if (i % 2 > 0) {
-            return (
-              <section style={styles.rowL}>
-                <Animation
-                  key={`animation${i}`}
-                  aniDiv={styles.aniDivL}
-                  aniImg={styles.aniImg}
-                  piece={piece}
-                />
-                <Piece key={`project${i}`} styles={styles} piece={piece} />
-              </section>
-            )
-          } else {
-            return (
-              <section style={styles.rowR}>
-                <Piece key={`project${i}`} styles={styles} piece={piece} />
-                <Animation
-                  key={`animation${i}`}
-                  aniDiv={styles.aniDivR}
-                  aniImg={styles.aniImg}
-                  piece={piece}
-                />
-              </section>
-            )
-          }
-        })}
-      </main>
-      <div id="background" style={styles.background}>
-        {styles.videos.map((video, i) => (
-          <video key={bckgrndVid + i} style={video} autoPlay muted loop>
+    <div id="appDiv" style={styles.var}>
+      <Nav styles={styles} />
+      <Route
+        exact
+        path="/"
+        render={(props) => <Home styles={styles} {...props} />}
+      />
+      <Route
+        path="/projects"
+        render={(props) => (
+          <Projects styles={styles} pieces={pieces} {...props} />
+        )}
+      />
+      <div id="background">
+        {[1, 1, 1, 1].map((video, i) => (
+          <video key={bckgrndVid + i} autoPlay muted loop>
             <source src={bckgrndVid} type="video/mp4" />
           </video>
         ))}
