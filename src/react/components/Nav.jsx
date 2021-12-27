@@ -17,7 +17,6 @@ const mapActionsToProps = (dispatch) => {
 }
 
 function Nav(props){
-  const videos = document.querySelectorAll('video')
 
   function themeToggle(){
     props.themeState.theme
@@ -33,7 +32,7 @@ function Nav(props){
         <Link to="/projects" id="navProjects">
           Projects
         </Link>
-        <a href="https://www.linkedin.com/in/saman-griffiths/" target="_blank" id="navContact">
+        <a href="https://www.linkedin.com/in/saman-khaliq/" target="_blank" id="navContact">
           ContactMe
         </a>
       </section>

@@ -1,13 +1,23 @@
 import './App.css'
-import Nav from './react/components/Nav'
-import AjScreenshot from './images/asteroidJuggler.png'
-import AjAni from './images/aj.png'
-import TttScreenshot from './images/tickTacToe.png'
-import TttAni from './images/ttt.png'
-import { connect } from 'react-redux'
-import Projects from './react/pages/Projects'
 import { Route } from 'react-router-dom'
+import { connect } from 'react-redux'
+import Nav from './react/components/Nav'
 import Home from './react/pages/Home'
+import Projects from './react/pages/Projects'
+import AjScreenshot from './images/screenshots/asteroidJuggler.png'
+import AjAni from './images/animations/aj.png'
+import TttScreenshot from './images/screenshots/tickTacToe.png'
+import TttAni from './images/animations/ttt.png'
+import SaScreenshot from './images/screenshots/simpleAdditions.png'
+import SaAni from './images/animations/sa.png'
+import HgScreenshot from './images/screenshots/hailGaming.png'
+import HgAni from './images/animations/hg.png'
+import RfScreenshot from './images/screenshots/resourceFull.png'
+import RfAni from './images/animations/rf.png'
+import TlScreenshot from './images/screenshots/tmdbLibrary.png'
+import TlAni from './images/animations/tl.png'
+import TrScreenshot from './images/screenshots/tmdbReThunk.png'
+import TrAni from './images/animations/tr.png'
 
 const mapStateToProps = ({ themeState }) => {
   return { themeState }
@@ -42,25 +52,66 @@ function App(props) {
     TttScreenshot,
     TttAni,
     'Animation of Me Playing Tic Tac Toe',
-    'https://github.com/SamanGriffiths47/Tick-Tac-Toe',
-    ''
+    'https://github.com/SamanGriffiths47/Tick-Tac-Toe'
   )
 
-  const pieces = [asteroidJuggler, tickTacToe]
+  const simpleAdditions = new Project(
+    'Simple Additions',
+    SaScreenshot,
+    SaAni,
+    'Animation of Me Holding My Dog',
+    'https://github.com/SamanGriffiths47/Simple-Additions'
+  )
+
+  const hailGaming = new Project(
+    'Hail Gaming Blog',
+    HgScreenshot,
+    HgAni,
+    'Animation of Me Gaming',
+    'https://github.com/SamanGriffiths47/Hail'
+  )
+
+  const resourceFull = new Project(
+    'ResourceFull',
+    RfScreenshot,
+    RfAni,
+    'Animation of Me Reading',
+    'https://github.com/SamanGriffiths47/Resource_Full'
+  )
+
+  const tmdbLibrary = new Project(
+    'TMDB Library',
+    TlScreenshot,
+    TlAni,
+    'Animation of Me Eating Popcorn',
+    'https://github.com/SamanGriffiths47/TMDB-Search'
+  )
+
+  const tmdbReThunk = new Project(
+    'TMDB ReThunk',
+    TrScreenshot,
+    TrAni,
+    'Animation of Me Watching Movies',
+    'https://github.com/SamanGriffiths47/TMDB-ReThunk'
+  )
+
+  const pieces = [
+    simpleAdditions,
+    hailGaming,
+    resourceFull,
+    tmdbReThunk,
+    asteroidJuggler,
+    tickTacToe,
+    tmdbLibrary
+  ]
 
   return (
     <div id="appDiv" style={styles.var}>
-      <Nav styles={styles} />
-      <Route
-        exact
-        path="/"
-        render={(props) => <Home styles={styles} {...props} />}
-      />
+      <Nav styles={styles} {...props} />
+      <Route exact path="/" render={(props) => <Home {...props} />} />
       <Route
         path="/projects"
-        render={(props) => (
-          <Projects styles={styles} pieces={pieces} {...props} />
-        )}
+        render={(props) => <Projects pieces={pieces} {...props} />}
       />
       <div id="background">
         {[1, 1, 1, 1].map((video, i) => (

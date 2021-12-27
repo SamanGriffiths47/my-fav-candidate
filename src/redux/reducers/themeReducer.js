@@ -16,6 +16,8 @@ const iState = {
       '--moonOp': '1',
       '--sunOp': '0',
       '--rayH': '3vh',
+      // Project Display
+      '--h1Color': 'white',
       // Screenshot Container
       '--pieceBxShdw': '0 0 6vw -2.5vw rgb(255, 255, 255)',
       '--pieceBckgrnd':
@@ -33,10 +35,11 @@ const iState = {
           rgb(51, 51, 51),\
           rgb(145, 145, 145)\
         )',
-      // App Display
+      // Project Link
       '--aHover': 'rgb(11, 37, 110)',
       '--aActive': 'rgb(0, 0, 40)',
-      '--aShadow': 'rgb(152, 152, 152)'
+      '--aShadow': 'rgb(152, 152, 152)',
+      '--aActiveShadow': 'rgb(200, 200, 200)'
     },
 
     // Theme Icon
@@ -57,6 +60,8 @@ const iState = {
       '--moonOp': '0',
       '--sunOp': '1',
       '--rayH': '7.5vh',
+      // Project Display
+      '--h1Color': 'grey',
       // Screenshot Container
       '--pieceBxShdw': '0 0 6vw -0.5vw rgb(50, 50, 50)',
       '--pieceBckgrnd':
@@ -77,7 +82,8 @@ const iState = {
       // App Display
       '--aHover': 'rgb(161, 214, 249)',
       '--aActive': 'rgb(49, 135, 214)',
-      '--aShadow': 'rgb(255, 195, 14)'
+      '--aShadow': 'rgb(255, 195, 14)',
+      '--aActiveShadow': 'rgb(255, 220, 60)'
     },
 
     // Theme Icon

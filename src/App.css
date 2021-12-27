@@ -16,6 +16,7 @@ main {
   position: absolute;
   overflow-y: scroll;
   display: flex;
+  align-items: center;
   color: white;
   width: 100%;
   height: 92%;
@@ -37,7 +38,7 @@ a {
   transition: 0s;
 }
 a:hover {
-  text-shadow: 0 0 4vh var(--aShadow);
+  text-shadow: 0 0 1vh var(--aShadow);
   color: var(--aHover);
 }
 a:active {
@@ -54,6 +55,13 @@ nav {
   align-items: center;
   display: flex;
   height: 8%;
+  font-size: calc((1.5vh + 1vw));
+}
+#linkSec {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85vw;
 }
 
 /* Theme Slider */
@@ -97,19 +105,18 @@ nav {
 }
 
 /* Project Display */
-.pRowR {
-  justify-content: space-between;
-  padding: 5vw 0 5vw 5vw;
-  display: flex;
-  min-height: 44vw;
-  width: 85vw;
+.instructions {
+  padding: 2vh 2vh 0 2vh;
+  color: var(--h1Color);
+  font-size: calc(1vh + 1.5vw);
+  text-align: center;
 }
-.pRowL {
+.pRow {
   justify-content: space-between;
-  padding: 5vw 5vw 0 5vw;
+  padding: 5vw 5vw;
   display: flex;
-  min-height: 44vw;
-  width: 85vw;
+  min-height: 50vw;
+  width: 90vw;
 }
 
 /* Project Piece */
@@ -180,9 +187,8 @@ nav {
   width: 18vw;
   box-shadow: var(--aniImgBxShdw);
 }
-.aniDivR {
+.aniDiv {
   align-self: flex-end;
-  margin: 0vw 0 0 5vw;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -190,15 +196,4 @@ nav {
   width: 22vw;
   background: var(--aniDivBckgrnd);
   box-shadow: var(--aniDivBxShdw);
-}
-.aniDivL {
-  align-self: flex-end;
-  margin: 0 5vw 0 0;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  height: 22vw;
-  width: 22vw;
-  box-shadow: var(--aniDivBxShdw);
-  background: var(--aniDivBckgrnd);
 }

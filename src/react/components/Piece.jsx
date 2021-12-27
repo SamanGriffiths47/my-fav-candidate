@@ -5,13 +5,16 @@ export default function Piece (props){
   function mouseOver(e){
     if (e.target.tagName === 'SECTION') {
       e.target.style.opacity = 1
+      e.target.children[0].style.pointerEvents='all'
     } else if (e.target.tagName ==='A') {
       e.target.parentElement.style.opacity = 1
+      e.target.style.pointerEvents='all'
     }
   }
   function mouseOut(e){
     if (e.target.tagName === 'SECTION') {
       e.target.style.opacity = 0
+      e.target.children[0].style.pointerEvents='none'
     }
   }
 
