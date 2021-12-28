@@ -10,14 +10,23 @@ const iState = {
       // Nav Bar
       '--navBckgrnd': 'linear-gradient(rgb(11, 37, 110), rgb(0, 0, 40))',
       '--navBxShdw': '0 0 5vw 0 rgb(94, 94, 94)',
+      // Home
+      '--textColor': 'white',
+      // Info
+      '--infoBckgrnd':
+        'linear-gradient(\
+          to top right,\
+          rgba(0, 0, 40, 0.8),\
+          rgba(11, 37, 110, 0.8)\
+      )',
       // Theme Icon
-      '--iconBxShdw': '0 0 5vw 1vw rgb(157,157,157)',
+      '--iconBxShdw': 'rgb(157,157,157)',
       '--iconMargin': '0 5vh 0 0',
       '--moonOp': '1',
       '--sunOp': '0',
       '--rayH': '3vh',
       // Project Display
-      '--h1Color': 'white',
+      '--hoverOver': 'rgba(0, 0, 0, 0.7)',
       // Screenshot Container
       '--pieceBxShdw': '0 0 6vw -2.5vw rgb(255, 255, 255)',
       '--pieceBckgrnd':
@@ -55,13 +64,22 @@ const iState = {
       '--navBckgrnd': 'linear-gradient(rgb(161, 214, 249), rgb(49, 135, 214))',
       '--navBxShdw': '0 0 3.5vw 1.5vw rgb(50, 50, 50)',
       // Theme Icon
-      '--IconBxShdw': '0 0 5vw 1.5vw rgb(255, 195, 14)',
-      '--IconMargin': '0 0 0 5vh',
+      '--iconBxShdw': 'rgb(255, 195, 14)',
+      '--iconMargin': '0 0 0 5vh',
       '--moonOp': '0',
       '--sunOp': '1',
       '--rayH': '7.5vh',
+      // Home
+      '--textColor': 'black',
+      // Info
+      '--infoBckgrnd':
+        'linear-gradient(\
+          to top right,\
+          rgba(49, 135, 214, 0.8),\
+          rgba(161, 214, 249, 0.8)\
+      )',
       // Project Display
-      '--h1Color': 'grey',
+      '--hoverOver': 'rgba(255, 255, 255, 0.7)',
       // Screenshot Container
       '--pieceBxShdw': '0 0 6vw -0.5vw rgb(50, 50, 50)',
       '--pieceBckgrnd':

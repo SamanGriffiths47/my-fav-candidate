@@ -10,7 +10,7 @@ export default function Projects(props){
 
   return (
         <main>
-          <h1 className='instructions'>
+          <h1 className='instructions header'>
             (
               {
                 mobileCheck
