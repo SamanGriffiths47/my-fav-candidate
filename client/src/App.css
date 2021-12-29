@@ -67,15 +67,14 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 85vw;
+  width: 66vw;
 }
-
 /* Theme Slider */
 #btnSec {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: 30%;
+  width: 15%;
   height: 4vh;
 }
 #btnSlider {
@@ -109,6 +108,18 @@ nav {
   height: var(--rayH);
   margin-bottom: 0.2vh;
 }
+/* ReCaptcha */
+.rc-anchor-normal-footer {
+  height: inherit !important;
+  background-color: red;
+}
+
+/* nav div { */
+/* width: 20vw; */
+/* } */
+/* iframe { */
+/* width: inherit; */
+/* } */
 
 /* Project Display */
 .instructions {

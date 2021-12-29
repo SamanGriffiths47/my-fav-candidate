@@ -107,10 +107,10 @@ export default function AboutMe(props){
               portfolio, teach myself new skills, and apply to positions. Over a 6 month period I built 7 web apps from the bottom
               up, getting comfortable working in a team setting for the benefit of the current project. Though I'm young and excited to
               work in any sector of the industry, I dream of working my way up to being on the cutting edge of A.I. development in the
-              next ten years. I'm fully prepaired to spend that decade grinding pushing the envelope at a company while utilizing my
-              free time to go back school and independently learn the skills necessary to make my dream come true! I worked my way up
+              next ten years. I'm fully prepaired to spend that decade pushing the envelope at a company while utilizing my
+              free time to go back school and independently learn the skills necessary to make my dream come true! I've worked my way up
               to being a Sous Chef at a restaurant in the Michelin Guide at the age of 19 while completely homeless, taking showers at
-              planet fitness. Trust me, I have what it takes, and if I dont I have the ambition and can- do it takes to get there!
+              planet fitness. Trust me, I have what it takes, and if I dont I have the ambition and can-do it takes to get there!
               Please feel free to paruse my portfolio and projects, don't hesitate to let me know what you think. Thank you for taking
               time out of your day to check out my work! 😄
             </h2>
