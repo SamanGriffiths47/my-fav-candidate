@@ -1,0 +1,439 @@
+/* Page Level */
+:root {
+  --text: 1vw;
+}
+body {
+  margin: 0;
+  font-family: Comic Sans MS, Comic Sans, cursive;
+  -webkit-text-stroke-color: white;
+  font-size: var(--text);
+}
+* {
+  transition: 0.5s all, 0s font-size;
+  color: var(--textColor);
+}
+#appDiv {
+  height: 100vh;
+  width: 100vw;
+}
+main {
+  flex-direction: column;
+  position: absolute;
+  overflow-y: scroll;
+  display: flex;
+  align-items: center;
+  color: white;
+  width: 100%;
+  height: 92%;
+  z-index: 1;
+}
+#background {
+  grid-template: 50% 50% / 50% 50%;
+  display: grid;
+  height: 92%;
+  width: 100%;
+}
+video {
+  object-fit: fill;
+  height: 100.1%;
+  width: 100%;
+}
+a,
+.linkDiv > section {
+  transition: 0.2s;
+}
+a:hover {
+  text-shadow: 0 0 1vh var(--aShadow);
+  color: var(--aHover);
+}
+a:active {
+  text-shadow: 0 0 4vh var(--aShadow);
+  color: var(--aActive);
+}
+
+/* Nav Bar */
+nav {
+  box-shadow: var(--navBxShdw);
+  background: var(--navBckgrnd);
+  justify-content: space-between;
+  padding: 0 8vw;
+  align-items: center;
+  display: flex;
+  height: 8%;
+  font-size: calc((1.5vh + 1vw));
+}
+#linkSec {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 68vw;
+}
+/* Theme Slider */
+#btnSec {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 15%;
+  height: 4vh;
+  margin-left: auto;
+}
+#btnSlider {
+  height: 2vh;
+}
+#iconBtn {
+  box-shadow: 0 0 5vw 1.5vw var(--iconBxShdw);
+  margin: var(--iconMargin);
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  background-color: rgba(0, 0, 0 0);
+  border-radius: 999px;
+  align-items: center;
+  border: none;
+  height: 2vh;
+}
+#iconBtn > * {
+  position: inherit;
+  cursor: pointer;
+}
+#moon {
+  height: 4vh;
+  opacity: var(--moonOp);
+}
+#sun {
+  height: 4vh;
+  opacity: var(--sunOp);
+}
+#ray {
+  height: var(--rayH);
+  margin-bottom: 0.2vh;
+}
+/* ReCaptcha */
+.resumeDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+/* Project Display */
+.instructions {
+  padding: 2vh 2vh 0 2vh;
+  font-size: calc(1vh + 1.5vw);
+  text-align: center;
+}
+.pRow {
+  justify-content: space-between;
+  padding: 5vw 5vw;
+  display: flex;
+  min-height: 50vw;
+  width: 90vw;
+}
+
+/* Project Piece */
+.pieceCont {
+  padding: 0 3vw 3vw 3vw;
+  display: grid;
+  grid-template: 20% 80% / 1fr;
+  height: 32vw;
+  width: 50vw;
+  box-shadow: var(--pieceBxShdw);
+  background: var(--pieceBckgrnd);
+  text-align: center;
+}
+.imgTitle {
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke: 0.2vw;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3vw;
+  height: 100%;
+  width: 100%;
+  grid-area: 1/1/2/2;
+}
+.pieceImg {
+  grid-area: 2/1/3/2;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template: 1fr / 1fr;
+}
+.pieceImg > img {
+  grid-area: 1/1/2/2;
+  height: 90%;
+  width: 100%;
+}
+.linkDiv {
+  height: 90%;
+  width: 100%;
+  font-size: 2vw;
+  position: relative;
+  grid-area: 1/1/2/2;
+}
+.linkDiv > section {
+  opacity: 0;
+  background-color: var(--hoverOver);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 3;
+}
+.linkDiv > section > a {
+  pointer-events: none;
+}
+
+/* Piece Animation */
+.aniImg {
+  height: 17vw;
+  width: 17vw;
+  box-shadow: var(--aniImgBxShdw);
+  padding: 1vw;
+}
+.aniDiv {
+  align-self: flex-end;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 22vw;
+  width: 22vw;
+  background: var(--aniDivBckgrnd);
+  box-shadow: var(--aniDivBxShdw);
+}
+
+/* Home Page */
+
+/* Greeting */
+#greeting {
+  font-size: calc(var(--text) * 3);
+  margin: 5vw;
+}
+.header {
+  text-shadow: 0 0 5vh var(--iconBxShdw);
+}
+#greetingImg {
+  width: 12vw;
+  margin-bottom: 2vw;
+}
+/* About Me */
+#aboutMe {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#info {
+  margin: 3vw 10vw;
+  display: grid;
+  grid-template: 1fr / 40% 60%;
+  background: var(--infoBckgrnd);
+  border-radius: 30px;
+}
+#attrCont {
+  display: flex;
+  align-items: center;
+  background: var(--aniDivBckgrnd);
+  padding: 3vw;
+}
+/* Attributes */
+#attributes {
+  height: inherit;
+  grid-area: 1/1/2/2;
+  padding-bottom: 0;
+}
+.attribute {
+  display: inline-grid;
+  grid-template: repeat(3, auto) / 1fr;
+}
+.title {
+  padding-right: 1vw;
+  margin-bottom: 0.4vw !important;
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  grid-area: 1/1/2/2;
+  margin: 0;
+}
+.barSec {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  grid-area: 2/1/3/2;
+}
+.bar {
+  height: 1vw;
+  width: 100%;
+  display: grid;
+  grid-template: 1fr / 1fr;
+  border-radius: 10px;
+  overflow-y: visible;
+  background-color: rgb(247, 247, 247);
+  margin-top: 0.2vw;
+}
+.level {
+  grid-area: 1/1/2/2;
+  background: linear-gradient(to right, rgb(0, 168, 0), rgb(0, 119, 0));
+  width: 0;
+  height: inherit;
+  border-radius: 10px;
+  height: inherit;
+}
+.reasoning {
+  grid-area: 3/1/4/2;
+  margin-top: 0.4vw;
+  margin-bottom: 0.8vw;
+  text-align: justify;
+  display: inline-block;
+}
+#attributes > :last-child > :last-child {
+  margin-bottom: 0;
+}
+.l0 {
+  animation: load 1.36s linear;
+  animation-iteration-count: 1;
+}
+.l1 {
+  animation: load 1.5s linear;
+  animation-iteration-count: 1;
+}
+.l2 {
+  animation: load 1.1s linear;
+  animation-iteration-count: 1;
+}
+.l3 {
+  animation: load 1.5s linear;
+  animation-iteration-count: 1;
+}
+
+/* Backstory */
+#backstory {
+  grid-area: 1/2/2/3;
+  padding: 3vw;
+  margin: 0;
+}
+#backstory > * {
+  margin: 0;
+}
+
+/* Poke Badges */
+#pokeBadges {
+  font-size: 1.2vw;
+  margin: 3vw 10vw 6vw 10vw;
+  padding: 2vw 2vw;
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: var(--pbBckgrnd);
+  border: ridge var(--logoBorder) 1.5vw;
+}
+#pokeBadges h1,
+h5 {
+  margin: 0;
+  padding: 0;
+}
+.badgeCont {
+  width: 100%;
+  margin: 1vw 0;
+}
+#pokeBadges h3 {
+  margin: 0;
+  text-align: left;
+  width: 100%;
+}
+#pokeBadges p {
+  margin: auto;
+  text-align: center;
+  vertical-align: middle;
+}
+.badgeDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: center;
+}
+.logoDiv {
+  width: 10vw;
+  display: grid;
+  grid-template: 50% 50% / auto;
+  height: 7vw;
+}
+.logoCont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5vw;
+  height: 2.5vw;
+  border: outset var(--logoBorder) 0.5vw;
+  background: var(--logoBckgrnd);
+  box-shadow: 0 0 2vw -0.2vw var(--pbBxShdw);
+  margin: 0 auto;
+}
+.logoCont:hover {
+  width: 3vw;
+  height: 3vw;
+  box-shadow: 0 0 3vw -0.2vw var(--pbBxShdw);
+}
+.logoImg {
+  width: 100%;
+  height: 100%;
+}
+#img22 {
+  width: 100%;
+  height: 65%;
+}
+
+@keyframes load {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: var(--lvl);
+  }
+}
+
+@media (orientation: portrait) {
+  :root {
+    --text: 2vw;
+  }
+  #greeting {
+    font-size: calc(var(--text) * 2.5);
+  }
+  #info {
+    grid-template: auto auto / 1fr;
+    border-radius: 10px;
+    margin: 0 7vw;
+  }
+  #backstory {
+    padding: 5vw;
+    grid-area: 1/1/2/2;
+  }
+  #attrCont {
+    grid-area: 2/1/3/2;
+    padding: 5vw;
+  }
+  #aboutMe {
+    margin-bottom: 7vw;
+  }
+  #pokeBadges {
+    margin: 0 7vw 7vw 7vw;
+    width: 80vw;
+    font-size: var(--text);
+  }
+  .logoDiv {
+    width: 20vw;
+    height: 10vw;
+  }
+  .logoCont {
+    width: 4vw;
+    height: 4vw;
+  }
+}
