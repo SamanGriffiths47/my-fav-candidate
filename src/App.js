@@ -72,7 +72,7 @@ function App(props) {
   )
 
   const resourceFull = new Project(
-    'ResourceFull',
+    'ReSource Full',
     RfScreenshot,
     RfAni,
     'Animation of Me Reading',
