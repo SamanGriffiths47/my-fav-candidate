@@ -109,12 +109,16 @@ nav {
   margin-bottom: 0.2vh;
 }
 /* ReCaptcha */
+#landing {
+  width: inherit;
+  height: inherit;
+}
 .resumeDiv {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
+  width: inherit;
+  height: inherit;
   z-index: 2;
 }
 
@@ -278,6 +282,7 @@ nav {
   margin-top: 0.2vw;
 }
 .level {
+  transition: 0s;
   grid-area: 1/1/2/2;
   background: linear-gradient(to right, rgb(0, 168, 0), rgb(0, 119, 0));
   width: 0;
@@ -309,6 +314,10 @@ nav {
 }
 .l3 {
   animation: load 1.5s linear;
+  animation-iteration-count: 1;
+}
+.l4 {
+  animation: load 1.7s linear;
   animation-iteration-count: 1;
 }
 

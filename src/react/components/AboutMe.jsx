@@ -26,45 +26,25 @@ import node from '../../images/pokebadges/node.jpg'
 import PostgreSQL from '../../images/pokebadges/PostgreSQL.png'
 import mongodb from '../../images/pokebadges/mongodb.png'
 // misc
-import regex from '../../images/pokebadges/regex.png'
+import regexLight from '../../images/pokebadges/regexLight.png'
+import regexDark from '../../images/pokebadges/regexDark.png'
+import { seen } from '../../redux/actions/themeActions'
 
 
 const mapStateToProps = ({ themeState }) => {
   return { themeState }
 }
 
+const mapDispatchToProps = (dispatch) => {
+  return {
+    seen: (i) => {dispatch(seen(i))}
+  }
+}
+
 function AboutMe(props){
-  const attributes= [
-    {
-      title: 'Teamwork',
-      reason: "I've spent the last 7 years of my life working in the restaurant industry which is heavily"+
-      " predicated on the ability of the employees to work harmoniously as a team.",
-      lvl: 86
-    },
-    {
-      title: 'Learning',
-      reason: "My old boss nicknamed me sponge because of my aptitude for learning, haha! It's a funny"+
-      " situation but it goes to show my history of being adptable, astute.",
-      lvl: 96
-    },
-    {
-      title: 'Communication',
-      reason: "This one's kind of a mixed bag and depends on what you're looking for. When a best"+
-      " practice of committing often is established, I'm good at sticking to it. I do however have"+
-      " a slight tendancy to \"overshare\". Some people like it, some don't, I just know I'd rather"+
-      " recieve too much information from a subordinate than too little so I try to give superiors"+
-      " that same courtesy.",
-      lvl: 70
-    },
-    {
-      title: 'Attitude',
-      reason: "While I am a very serious and focused person, I always try to bring joy and fun into"+
-      " any space I enter. if you don't enjoy working at you job and with your coworkers then you're doing"+
-      " something wrong. Most of the time, we see our coworkers more than our family members, I strongly"+
-      " believe that those relationships deserve effort and attention!",
-      lvl: 96
-    }
-  ]
+  const home = document.querySelector('#home')
+
+  const attributes = props.themeState.attributes
 
   const pokeBadges = {
     'Front End': {
@@ -93,44 +73,48 @@ function AboutMe(props){
     'Database / Misc': {
       'MongoDB': mongodb,
       'PostgreSql': PostgreSQL,
-      'Regex': regex
+      'Regex': props.themeState.theme ? regexLight : regexDark
     },
   }
 
+
   const loadAttr = () => {
-    const arr = []
-    for (let i = 0; i < 4; i++){
-      const level = document.getElementsByClassName('level')[i]
-      const bounding = level.getBoundingClientRect()
-      if(!level.classList.contains(`load${i}`)){
-        if (
-          bounding.top >= 0 &&
-          bounding.left >= 0 &&
-          bounding.right <= window.innerWidth &&
-          bounding.bottom <= window.innerHeight
-        ) {
-          level.style.width = 'var(--lvl)'
-          level.classList.add(`load`)
-          level.classList.add(`l${i}`)
-          arr.push(true)
+    if(props.history.location.pathname === '/'){
+      const arr = []
+      for (let i = 0; i < attributes.length; i++){
+        const level = document.getElementsByClassName('level')[i]
+        const attribute = attributes[i]
+        const bounding = level.getBoundingClientRect()
+        if(!attribute.seen){
+          if (
+            bounding.top >= 0 &&
+            bounding.left >= 0 &&
+            bounding.right <= window.innerWidth &&
+            bounding.bottom <= window.innerHeight
+          ) {
+            props.seen(i)
+            level.style.width = 'var(--lvl)'
+            level.classList.add(`load`)
+            level.classList.add(`l${i}`)
+            arr.push(true)
+          } else {
+            arr.push(false)
+          }
         } else {
-          arr.push(false)
+          level.style.width = 'var(--lvl)'
+          arr.push(true)
         }
-      } else {
-        arr.push(true)
       }
+      !arr.includes(false) &&
+      home.removeEventListener('scroll', loadAttr)
     }
-    !arr.includes(false) &&
-    document.removeEventListener('scroll', loadAttr)
   }
-  const home = document.querySelector('#home')
+  
   useEffect(()=>{
-    if(home){
-      setTimeout(()=>{
-        home.addEventListener('scroll', loadAttr)
-        loadAttr()
-      }, 10)
-    }
+    setTimeout(()=>{
+      home.addEventListener('scroll', loadAttr)
+      loadAttr()
+    },10)
   },[home])
 
   return (
@@ -161,17 +145,20 @@ function AboutMe(props){
         </section>
           <div id='backstory'>
             <h2 align='justify'>
-              I am a Software Engineer! Wow, that feels so great to say after betting on myself by quitting my stable job as a Kitchen
-              Manager, spending 4 months grinding 12+ hrs a day in the General Assembly bootcamp, and working since then to polish my
-              portfolio, teach myself new skills, and apply to positions. Over a 6 month period I built 7 web apps from the bottom
-              up, getting comfortable working in a team setting for the benefit of the current project. Though I'm young and excited to
-              work in any sector of the industry, I dream of working my way up to being on the cutting edge of A.I. development in the
-              next ten years. I'm fully prepaired to spend that decade pushing the envelope at a company while utilizing my free time
-              to go back school and independently learn the skills necessary to make my dream come true! At only 19 years old I worked
-              my way up to being a Sous Chef at a restaurant featured in the Michelin Guide while completely homeless, taking showers
-              at planet fitness. Trust me, I have what it takes, and if I dont I have the ambition and can-do it takes to get there!
-              Please feel free to paruse my portfolio and projects, don't hesitate to let me know what you think. Thank you for taking
-              time out of your day to check out my work! 😄
+              I am a Software Engineer! Wow, that feels so great to say after quitting my stable job as a Kitchen
+              Manager, spending 4 months grinding 12+ hrs a day in the General Assembly Bootcamp, and working since then to polish my
+              portfolio, teach myself new skills, and apply to positions. In 6 months I built 7 web apps from the bottom
+              up, getting comfortable working in a team setting for the benefit of the current project. It was during this chrysalis-like
+              stage in my development as an engineer that I fell completely smitten with the minutiae of this industry. Synthesizing
+              low-latency recursive algorithms, cleaning up messy codebases with object-oriented programing (to keep them as D.R.Y as
+              possible), painstakingly testing responsive web designs, B.I.F.I.R (Break It, Fix It, Repeat) as many times as it takes
+              to make it right. These are all skills that I have far from perfected, but my progress in their regard has been
+              personally breath-taking and I know that my infatuation with them will bring me as close to perfection as I can
+              get. Though I <i>am</i> young and excited to work in any sector of the industry, I dream of working my way up to being on
+              the cutting edge of A.I. development in the next ten years. I'm fully prepared to spend that decade pushing the envelope
+              at a company while utilizing my free time to go back to school and independently learn the skills necessary to make my dream
+              come true! Please feel free to peruse my portfolio and projects, don't hesitate to let me know what you think. Thank you
+              for taking time out of your day to check out my work! 😄
             </h2>
           </div>
       </section>
@@ -201,4 +188,4 @@ function AboutMe(props){
     </section>
   )
 }
-export default connect(mapStateToProps)(AboutMe)
+export default connect(mapStateToProps, mapDispatchToProps)(AboutMe)

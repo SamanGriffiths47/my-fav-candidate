@@ -1,4 +1,4 @@
-import { LIGHT_MODE, DARK_MODE, AUTHENTICATE } from '../types'
+import { LIGHT_MODE, DARK_MODE, AUTHENTICATE, SEEN } from '../types'
 import reggie from '../../images/stargif.mp4'
 import negative from '../../images/stargif_neg.mp4'
 import btnSlider from '../../images/btnSlider.png'
@@ -9,6 +9,55 @@ const hour = parseInt(time.slice(0, 2))
 
 const iState = {
   authenticated: false,
+  attributes: [
+    {
+      title: 'Teamwork',
+      reason:
+        "I've spent the past 7 years of my life working in the restaurant industry," +
+        ' one heavily reliant on the ability of the employees to work harmoniously as a team.',
+      lvl: 86,
+      seen: false
+    },
+    {
+      title: 'Learning',
+      reason:
+        'My old boss nicknamed me sponge because of my aptitude for learning, haha! While it is a funny' +
+        ' situation, it does go to show my history of being adaptable, and astute.',
+      lvl: 96,
+      seen: false
+    },
+    {
+      title: 'Communication',
+      reason:
+        "This one is kind of a mixed bag and depends on what you're looking for. When a best" +
+        " practice of committing often is established, I'm good at following it. I do, however, have" +
+        ` a slight tendency to "overshare." Some people like it, some don't. I just know that I'd rather` +
+        ' receive too much information from a subordinate than too little, so I try to give superiors' +
+        ' that same courtesy.',
+      lvl: 70,
+      seen: false
+    },
+    {
+      title: 'Attitude',
+      reason:
+        'While I am a very focused and resolute person, I always try to bring joy and fun into any space' +
+        " I enter. No one deserves to work at a job that depresses them, with coworkers they can't stand." +
+        ' Most of the time, we see our coworkers more than our family members. I wholeheartedly believe that' +
+        ' those relationships deserve effort and attention!',
+      lvl: 96,
+      seen: false
+    },
+    {
+      title: 'Drive',
+      reason:
+        'By 19, I had worked my way up to a Sous Chef position at a Michelin Guide featured restaurant;' +
+        ' I did this while completely homeless, taking showers at Planet Fitness before work.' +
+        " Since then, I've honed this raw ambition, which has been without a doubt the driving factor in" +
+        ' my growth as a man.',
+      lvl: 110,
+      seen: false
+    }
+  ],
   TOD:
     hour > 0 && hour < 11
       ? 'Morning'
@@ -163,6 +212,10 @@ export default function themeReducer(state = iState, action) {
       return { ...state, theme: action.payload }
     case AUTHENTICATE:
       return { ...state, authenticated: true }
+    case SEEN:
+      const att = state.attributes
+      att[action.payload].seen = true
+      return { ...state, attributes: att }
     default:
       return { ...state }
   }

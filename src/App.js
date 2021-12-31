@@ -111,13 +111,15 @@ function App(props) {
       style={{ ...styles.var, '--winWid': `${document.body.clientWidth}` }}
     >
       <Nav styles={styles} {...props} />
-      <Route exact path="/" render={(props) => <Home {...props} />} />
-      {props.themeState.authenticated && (
-        <Route
-          path="/projects"
-          render={(props) => <Projects pieces={pieces} {...props} />}
-        />
-      )}
+      <main id="home">
+        <Route exact path="/" render={(props) => <Home {...props} />} />
+        {props.themeState.authenticated && (
+          <Route
+            path="/projects"
+            render={(props) => <Projects pieces={pieces} {...props} />}
+          />
+        )}
+      </main>
       <div id="background">
         {[1, 1, 1, 1].map((video, i) => (
           <video key={bckgrndVid + i} autoPlay muted loop>

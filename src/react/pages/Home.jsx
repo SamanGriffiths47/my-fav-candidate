@@ -19,9 +19,9 @@ function Home (props) {
   }
 
   return (
-    <main id='home'>
+    <section id="landing">
       { props.themeState.authenticated ? 
-        <AboutMe /> :
+        <AboutMe {...props}/> :
         <div className="resumeDiv">
           < ReCAPTCHA
           theme='dark'
@@ -30,7 +30,7 @@ function Home (props) {
           />
         </div>
       }
-    </main>
+    </section>
   )
 }
 export default connect(mapStateToProps, mapActionsToProps)(Home)
