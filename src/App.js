@@ -24,11 +24,6 @@ const mapStateToProps = ({ themeState }) => {
 }
 
 function App(props) {
-  const history = useHistory()
-  if (history.location.pathname !== '/') {
-    history.push('/')
-  }
-
   const styles = props.themeState.theme
     ? props.themeState.lightMode
     : props.themeState.darkMode
