@@ -3,7 +3,6 @@ import { Route, useHistory } from 'react-router-dom'
 import { connect } from 'react-redux'
 import Nav from './react/components/Nav'
 import Home from './react/pages/Home'
-import Projects from './react/pages/Projects'
 import AjScreenshot from './images/screenshots/asteroidJuggler.png'
 import AjAni from './images/animations/aj.png'
 import TttScreenshot from './images/screenshots/tickTacToe.png'
@@ -18,6 +17,7 @@ import TlScreenshot from './images/screenshots/tmdbLibrary.png'
 import TlAni from './images/animations/tl.png'
 import TrScreenshot from './images/screenshots/tmdbReThunk.png'
 import TrAni from './images/animations/tr.png'
+import Protection from './react/pages/Protection'
 
 const mapStateToProps = ({ themeState }) => {
   return { themeState }
@@ -118,12 +118,10 @@ function App(props) {
       <Nav styles={styles} {...props} />
       <main id="home">
         <Route exact path="/" render={(props) => <Home {...props} />} />
-        {props.themeState.authenticated && (
-          <Route
-            path="/projects"
-            render={(props) => <Projects pieces={pieces} {...props} />}
-          />
-        )}
+        <Route
+          path="/:addy"
+          render={(props) => <Protection pieces={pieces} {...props} />}
+        />
       </main>
       <div id="background">
         {[1, 1, 1, 1].map((video, i) => (
