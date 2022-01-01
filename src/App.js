@@ -1,5 +1,5 @@
 import './App.css'
-import { Route } from 'react-router-dom'
+import { Route, useHistory } from 'react-router-dom'
 import { connect } from 'react-redux'
 import Nav from './react/components/Nav'
 import Home from './react/pages/Home'
@@ -24,6 +24,11 @@ const mapStateToProps = ({ themeState }) => {
 }
 
 function App(props) {
+  const history = useHistory()
+  if (history.location.pathname !== '/') {
+    history.push('/')
+  }
+
   const styles = props.themeState.theme
     ? props.themeState.lightMode
     : props.themeState.darkMode
