@@ -434,11 +434,11 @@ h5 {
   }
   #pokeBadges {
     margin: 0 7vw 7vw 7vw;
-    width: 80vw;
+    width: auto;
     font-size: var(--text);
   }
   .logoDiv {
-    width: 20vw;
+    width: 19.75vw;
     height: 10vw;
   }
   .logoCont {
