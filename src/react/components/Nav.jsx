@@ -34,7 +34,7 @@ function Nav(props){
           Projects
         </Link>
         <a
-        href="https://docs.google.com/document/d/1QCoWFBEs-nfWx2dz9_SshnAFDlCYmwajNLAx7f8er0U/edit?usp=sharing"
+        href="https://drive.google.com/file/d/15ErcrzU48qB-4L8gW_Asb9j2OsvfwEH8/view?usp=sharing"
         target='_blank'
         rel="noreferrer"
         id="resume">
