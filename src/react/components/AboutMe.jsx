@@ -29,8 +29,8 @@ import mongodb from '../../images/pokebadges/mongodb.png'
 // misc
 import regexLight from '../../images/pokebadges/regexLight.png'
 import regexDark from '../../images/pokebadges/regexDark.png'
-import AWS from '../../images/pokebadges/aws.jpeg'
-import GCP from '../../images/pokebadges/gcp.jpeg'
+import aws from '../../images/pokebadges/aws.jpeg'
+import gcp from '../../images/pokebadges/gcp.jpeg'
 
 
 const mapStateToProps = ({ themeState }) => {
@@ -76,8 +76,8 @@ function AboutMe(props){
       'MongoDB': mongodb,
       'PostgreSql': PostgreSQL,
       'Regex': props.themeState.theme ? regexLight : regexDark,
-      'AWS': AWS,
-      'GCP': GCP
+      'AWS': aws,
+      'GCP': gcp
     },
   }
 
