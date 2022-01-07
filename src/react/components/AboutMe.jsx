@@ -29,8 +29,8 @@ import mongodb from '../../images/pokebadges/mongodb.png'
 // misc
 import regexLight from '../../images/pokebadges/regexLight.png'
 import regexDark from '../../images/pokebadges/regexDark.png'
-import AWS from '../../images/pokebadges/AWS.jpeg'
-import GCP from '../../images/pokebadges/GCP.jpeg'
+import AWS from '../../images/pokebadges/aws.jpeg'
+import GCP from '../../images/pokebadges/gcp.jpeg'
 
 
 const mapStateToProps = ({ themeState }) => {
