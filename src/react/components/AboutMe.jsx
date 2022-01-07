@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { connect } from 'react-redux'
+import { seen } from '../../redux/actions/themeActions'
 import greeting from '../../images/animations/hello.png'
 // front-end
 import css from '../../images/pokebadges/css.png'
@@ -28,7 +29,8 @@ import mongodb from '../../images/pokebadges/mongodb.png'
 // misc
 import regexLight from '../../images/pokebadges/regexLight.png'
 import regexDark from '../../images/pokebadges/regexDark.png'
-import { seen } from '../../redux/actions/themeActions'
+import AWS from '../../images/pokebadges/AWS.jpeg'
+import GCP from '../../images/pokebadges/GCP.jpeg'
 
 
 const mapStateToProps = ({ themeState }) => {
@@ -73,7 +75,9 @@ function AboutMe(props){
     'Database / Misc': {
       'MongoDB': mongodb,
       'PostgreSql': PostgreSQL,
-      'Regex': props.themeState.theme ? regexLight : regexDark
+      'Regex': props.themeState.theme ? regexLight : regexDark,
+      'AWS': AWS,
+      'GCP': GCP
     },
   }
 
