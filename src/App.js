@@ -1,5 +1,5 @@
 import './App.css'
-import { Route, useHistory } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 import Nav from './react/components/Nav'
 import Home from './react/pages/Home'
