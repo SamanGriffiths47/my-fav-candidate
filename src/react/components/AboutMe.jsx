@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { seen } from '../../redux/actions/themeActions'
 import greeting from '../../images/animations/hello.png'
+
 // front-end
 import css from '../../images/pokebadges/css.png'
 import html from '../../images/pokebadges/html.png'
@@ -13,24 +14,30 @@ import vue from '../../images/pokebadges/vue.jpeg'
 import vuex from '../../images/pokebadges/vuex.png'
 import vuetify from '../../images/pokebadges/vuetify.png'
 import nuxt from '../../images/pokebadges/nuxt.jpeg'
+import tailwind from '../../images/pokebadges/tailwind.png'
+
 // middleware / backend
 import mongoose from '../../images/pokebadges/mongoose.png'
 import express from '../../images/pokebadges/express.jpg'
 import sequelize from '../../images/pokebadges/sequelize.png'
 import SQLAlchemy from '../../images/pokebadges/SQLAlchemy.png'
+import jwt from '../../images/pokebadges/jwt.png'
 import cors from '../../images/pokebadges/cors.png'
 import axios from '../../images/pokebadges/axios.png'
 import flask from '../../images/pokebadges/flask.jpeg'
 import python from '../../images/pokebadges/python.png'
 import node from '../../images/pokebadges/node.jpg'
+
 // database
 import PostgreSQL from '../../images/pokebadges/PostgreSQL.png'
+import sql from '../../images/pokebadges/sql.png'
 import mongodb from '../../images/pokebadges/mongodb.png'
 // misc
 import regexLight from '../../images/pokebadges/regexLight.png'
 import regexDark from '../../images/pokebadges/regexDark.png'
 import aws from '../../images/pokebadges/aws.jpeg'
 import gcp from '../../images/pokebadges/GCP.jpeg'
+import git from '../../images/pokebadges/git.png'
 
 
 const mapStateToProps = ({ themeState }) => {
@@ -53,13 +60,14 @@ function AboutMe(props){
       'CSS': css,
       'HTML': html,
       'Vanilla JS': javascript,
+      'Tailwind': tailwind,
       'React.js': react,
       'React-Bootstrap': reactBootstrap,
       'Redux': redux,
       'Vue.js': vue,
       'Vuex': vuex,
       'Vuetify': vuetify,
-      'Nuxt.js': nuxt
+      'Nuxt.js': nuxt,
     },
     'Middleware / Backend': {
       'Axios': axios,
@@ -68,14 +76,17 @@ function AboutMe(props){
       'Sequelize': sequelize,
       'Mongoose': mongoose,
       'Cors': cors,
+      'JWT': jwt,
       'Python': python,
       'Flask': flask,
       'SQLAlchemy': SQLAlchemy,
     },
     'Database / Misc': {
       'MongoDB': mongodb,
+      'SQL': sql,
       'PostgreSql': PostgreSQL,
       'Regex': props.themeState.theme ? regexLight : regexDark,
+      'Git': git,
       'AWS': aws,
       'GCP': gcp
     },

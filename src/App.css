@@ -32,6 +32,7 @@ main {
   display: grid;
   height: 92%;
   width: 100%;
+  z-index: 4;
 }
 video {
   object-fit: fill;
@@ -86,7 +87,7 @@ nav {
   display: flex;
   justify-content: center;
   position: absolute;
-  background-color: rgba(0, 0, 0 0);
+  background-color: rgba(0, 0, 0, 0);
   border-radius: 999px;
   align-items: center;
   border: none;
@@ -230,6 +231,9 @@ nav {
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+#pokeBadges * {
+  /* display: none; */
 }
 #info {
   margin: 3vw 10vw;
@@ -395,7 +399,7 @@ h5 {
   width: 100%;
   height: 100%;
 }
-#img22 {
+#img23 {
   width: 100%;
   height: 65%;
 }
