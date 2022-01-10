@@ -120,7 +120,7 @@ function App(props) {
       </main>
       <div id="background">
         {[1, 1, 1, 1].map((video, i) => (
-          <video key={bckgrndVid + i} playsinline autoPlay muted loop>
+          <video key={bckgrndVid + i} playsInline autoPlay muted loop>
             <source src={bckgrndVid} type="video/mp4" />
           </video>
         ))}
