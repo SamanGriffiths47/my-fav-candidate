@@ -51,7 +51,6 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 function AboutMe(props){
-  const home = document.querySelector('#home')
 
   const attributes = props.themeState.attributes
 
@@ -94,6 +93,7 @@ function AboutMe(props){
 
 
   const loadAttr = () => {
+    const home = document.querySelector('#home')
     if(props.history.location.pathname === '/'){
       const arr = []
       for (let i = 0; i < attributes.length; i++){
@@ -126,11 +126,9 @@ function AboutMe(props){
   }
   
   useEffect(()=>{
-    setTimeout(()=>{
-      home.addEventListener('scroll', loadAttr)
-      loadAttr()
-    },10)
-  },[home])
+    document.querySelector('#home').addEventListener('scroll', loadAttr)
+    loadAttr()
+  })
 
   return (
     <section id='aboutMe' align='center'>
@@ -178,7 +176,7 @@ function AboutMe(props){
           </div>
       </section>
       <section id='pokeBadges'>
-        <h1>Technological Proficiencies</h1>
+        <h2>Technological Proficiencies</h2>
         <h5>(AKA: Pokemon Badges)</h5>
         {Object.keys(pokeBadges).map((cat, i) => {
           return (

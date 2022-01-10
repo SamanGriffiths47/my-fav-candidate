@@ -2,6 +2,7 @@ import './App.css'
 import { Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 import Nav from './react/components/Nav'
+import Projects from './react/pages/Projects'
 import Home from './react/pages/Home'
 import AjScreenshot from './images/screenshots/asteroidJuggler.png'
 import AjAni from './images/animations/aj.png'
@@ -111,13 +112,6 @@ function App(props) {
       style={{ ...styles.var, '--winWid': `${document.body.clientWidth}` }}
     >
       <Nav styles={styles} {...props} />
-      <main id="home">
-        <Route exact path="/" render={(props) => <Home {...props} />} />
-        <Route
-          path="/:addy"
-          render={(props) => <Protection pieces={pieces} {...props} />}
-        />
-      </main>
       <div id="background">
         {[1, 1, 1, 1].map((video, i) => (
           <video key={bckgrndVid + i} playsInline autoPlay muted loop>
@@ -125,6 +119,14 @@ function App(props) {
           </video>
         ))}
       </div>
+      <main id="home">
+        <Route exact path="/" render={(props) => <Home {...props} />} />
+        <Route
+          path="/projects"
+          // render={(props) => <Protection pieces={pieces} {...props} />}
+          render={(props) => <Projects pieces={pieces} {...props} />}
+        />
+      </main>
     </div>
   )
 }

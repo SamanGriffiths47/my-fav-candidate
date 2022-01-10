@@ -69,6 +69,7 @@ const iState = {
   darkMode: {
     reCapTheme: 'dark',
     var: {
+      '--txtBxShdw': '0 0 1vh rgb(157,157,157)',
       // Nav Bar
       '--navBckgrnd': 'linear-gradient(rgb(11, 37, 110), rgb(0, 0, 40))',
       '--navBxShdw': '0 0 5vw 0 rgb(94, 94, 94)',
@@ -129,7 +130,8 @@ const iState = {
         'rgb(0, 0, 40),' +
         'rgb(11, 37, 110)' +
         ')',
-      '--pbBxShdw': 'rgb(255, 255, 255)'
+      '--pbBxShdw': 'rgb(255, 255, 255)',
+      '--pbBxShdwHvr': 'rgb(255, 255, 255, 0.6)'
     },
 
     // Theme Icon
@@ -142,9 +144,10 @@ const iState = {
   lightMode: {
     reCapTheme: 'light',
     var: {
+      '--txtBxShdw': 'none',
       // Nav Bar
       '--navBckgrnd': 'linear-gradient(rgb(161, 214, 249), rgb(49, 135, 214))',
-      '--navBxShdw': '0 0 3.5vw 1.5vw rgb(50, 50, 50)',
+      '--navBxShdw': '0 0 5vw 0 rgb(255, 195, 14)',
       // Theme Icon
       '--iconBxShdw': 'rgb(255, 195, 14)',
       '--iconMargin': /Chrome/.test(navigator.userAgent)
@@ -202,7 +205,8 @@ const iState = {
         'rgb(49, 135, 214),' +
         'rgb(161, 214, 249)' +
         ')',
-      '--pbBxShdw': 'rgb(50, 50, 50)'
+      '--pbBxShdw': 'rgb(50, 50, 50)',
+      '--pbBxShdwHvr': 'rgba(50, 50, 50, 0.75)'
     },
 
     // Theme Icon

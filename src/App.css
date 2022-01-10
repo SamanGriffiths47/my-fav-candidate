@@ -18,65 +18,97 @@ body {
 }
 main {
   flex-direction: column;
-  position: absolute;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  /* min-height: 92%; */
   overflow-y: scroll;
   display: flex;
   align-items: center;
   color: white;
   width: 100%;
   height: 92%;
-  z-index: 1;
 }
 #background {
+  z-index: 2;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 92%;
   grid-template: 50% 50% / 50% 50%;
   display: grid;
   height: 92%;
   width: 100%;
-  z-index: 4;
+  z-index: -1;
 }
 video {
   object-fit: fill;
   height: 100.1%;
   width: 100%;
 }
+#resume {
+  text-decoration: underline;
+}
 a,
-.linkDiv > section {
+#resume {
+  text-shadow: 0 0 1vh var(--iconBxShdw);
   transition: 0.2s;
 }
-a:hover {
-  text-shadow: 0 0 1vh var(--aShadow);
+a:hover,
+#resume:hover {
+  text-shadow: 0 0 1.5vh var(--aShadow);
   color: var(--aHover);
 }
-a:active {
+a:active,
+#resume:active {
   text-shadow: 0 0 4vh var(--aShadow);
   color: var(--aActive);
 }
 
 /* Nav Bar */
 nav {
-  box-shadow: var(--navBxShdw);
-  background: var(--navBckgrnd);
-  justify-content: space-between;
-  padding: 0 8vw;
-  align-items: center;
-  display: flex;
+  display: grid;
+  grid-template: 1fr / 1fr;
   height: 8%;
-  font-size: calc((1.5vh + 1vw));
+  position: relative;
 }
 #linkSec {
+  padding: 0 8vw;
+  box-shadow: var(--navBxShdw);
+  background: var(--navBckgrnd);
+  font-size: calc((1.5vh + 1vw));
+  grid-area: 1/1/2/2;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 68vw;
+  width: 84%;
+  height: 8vh;
+  position: relative;
+  z-index: 4;
+}
+.recapDiv {
+  grid-area: 1/1/2/2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: auto;
+  position: absolute;
+}
+.recapDiv * {
+  position: relative;
+  z-index: 2;
 }
 /* Theme Slider */
 #btnSec {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: 15%;
+  width: auto;
   height: 4vh;
-  margin-left: auto;
+  /* margin-left: auto; */
 }
 #btnSlider {
   height: 2vh;
@@ -111,16 +143,8 @@ nav {
 }
 /* ReCaptcha */
 #landing {
-  width: inherit;
-  height: inherit;
-}
-.resumeDiv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: inherit;
-  height: inherit;
-  z-index: 2;
+  width: 100%;
+  height: 100%;
 }
 
 /* Project Display */
@@ -149,8 +173,10 @@ nav {
   text-align: center;
 }
 .imgTitle {
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
-  -webkit-text-stroke: 0.2vw;
+  /* -webkit-text-fill-color: rgba(0, 0, 0, 0); */
+  /* -webkit-text-stroke: 0.2vw; */
+  text-shadow: 0 0 1vh var(--iconBxShdw);
+  font-weight: lighter;
   margin: 0;
   display: flex;
   align-items: center;
@@ -188,7 +214,7 @@ nav {
   height: 100%;
   width: 100%;
   position: absolute;
-  z-index: 3;
+  /* z-index: 3; */
 }
 .linkDiv > section > a {
   pointer-events: none;
@@ -220,7 +246,7 @@ nav {
   margin: 5vw;
 }
 .header {
-  text-shadow: 0 0 5vh var(--iconBxShdw);
+  text-shadow: 0 0 1vh var(--iconBxShdw);
 }
 #greetingImg {
   width: 12vw;
@@ -231,9 +257,6 @@ nav {
   display: flex;
   align-items: center;
   flex-direction: column;
-}
-#pokeBadges * {
-  /* display: none; */
 }
 #info {
   margin: 3vw 10vw;
@@ -259,6 +282,7 @@ nav {
   grid-template: repeat(3, auto) / 1fr;
 }
 .title {
+  text-shadow: var(--txtBxShdw);
   padding-right: 1vw;
   margin-bottom: 0.4vw !important;
   text-align: left;
@@ -337,7 +361,7 @@ nav {
 
 /* Poke Badges */
 #pokeBadges {
-  font-size: 1.2vw;
+  font-size: 1.2em;
   margin: 3vw 10vw 6vw 10vw;
   padding: 2vw 2vw;
   width: 50vw;
@@ -348,10 +372,14 @@ nav {
   background: var(--pbBckgrnd);
   border: ridge var(--logoBorder) 1.5vw;
 }
-#pokeBadges h1,
+#pokeBadges h2,
 h5 {
   margin: 0;
   padding: 0;
+}
+#pokeBadges h2,
+h3 {
+  text-shadow: 0 0 1vh var(--iconBxShdw);
 }
 .badgeCont {
   width: 100%;
@@ -393,7 +421,7 @@ h5 {
 .logoCont:hover {
   width: 3vw;
   height: 3vw;
-  box-shadow: 0 0 3vw -0.2vw var(--pbBxShdw);
+  box-shadow: 0 0 2vw -0.2vw var(--pbBxShdwHvr);
 }
 .logoImg {
   width: 100%;
@@ -439,7 +467,7 @@ h5 {
   #pokeBadges {
     margin: 0 7vw 7vw 7vw;
     width: auto;
-    font-size: var(--text);
+    /* font-size: var(--text); */
   }
   .logoDiv {
     width: 19.75vw;

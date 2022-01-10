@@ -4,6 +4,8 @@ import { darkMode, lightMode } from '../../redux/actions/themeActions'
 import sunIcon from '../../images/sunIcon.png'
 import moonIcon from '../../images/moonIcon.png'
 import sunRays from '../../images/sunRayIcon.png'
+import ReCAPTCHA from "react-google-recaptcha-enterprise"
+import { useState } from 'react'
 
 const mapStateToProps = ({ themeState }) => {
   return { themeState }
@@ -22,10 +24,27 @@ function Nav(props){
     : props.initLightMode()
   }
 
+  const [margin, setMargin] = useState('-150%')
+
+  function onClick (e){
+    e.preventDefault()
+    margin === '10vh' ? setMargin('-150%') : setMargin('10vh')
+  }
+
+  const reCaptchaCallback = (token) => {
+    token && (window.location.href = 'https://drive.google.com/file/d/15ErcrzU48qB-4L8gW_Asb9j2OsvfwEH8/view?usp=sharing')
+  }
 
   return(
     <nav id="navbar">
-      { props.themeState.authenticated &&
+      <div className="recapDiv">
+        < ReCAPTCHA
+        style={{marginTop: margin}}
+        theme='dark'
+        sitekey={process.env.REACT_APP_RECAPTCHA_KEY}
+        onChange={reCaptchaCallback}
+        />
+      </div>
       <section id='linkSec'>
         <Link to="/" id="navHome">
           Home
@@ -34,9 +53,7 @@ function Nav(props){
           Projects
         </Link>
         <a
-        href="https://drive.google.com/file/d/15ErcrzU48qB-4L8gW_Asb9j2OsvfwEH8/view?usp=sharing"
-        target='_blank'
-        rel="noreferrer"
+        onClick={onClick}
         id="resume">
         Resume
         </a>
@@ -48,15 +65,14 @@ function Nav(props){
         >
           ContactMe
         </a>
-      </section>
-      }
-      <section id='btnSec'>
-        <img id='btnSlider' src={props.styles.btnSliderSrc} alt="Button Slider"/>
-        <button onClick={themeToggle} id='iconBtn'>
-          <img id='ray' src={sunRays} alt="Sun Rays" />
-          <img id='sun' src={sunIcon} alt="Theme Icon"/>
-          <img id='moon' src={moonIcon} alt="Theme Icon"/>
-        </button>
+        <section id='btnSec'>
+          <img id='btnSlider' src={props.styles.btnSliderSrc} alt="Button Slider"/>
+          <button onClick={themeToggle} id='iconBtn'>
+            <img id='ray' src={sunRays} alt="Sun Rays" />
+            <img id='sun' src={sunIcon} alt="Theme Icon"/>
+            <img id='moon' src={moonIcon} alt="Theme Icon"/>
+          </button>
+        </section>
       </section>
     </nav>
   )
