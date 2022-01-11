@@ -36,7 +36,7 @@ const iState = {
         ` a slight tendency to "overshare." Some people like it, some don't. I just know that I'd rather` +
         ' receive too much information from a subordinate than too little, so I try to give superiors' +
         ' that same courtesy.',
-      lvl: 70,
+      lvl: 78,
       seen: false
     },
     {

@@ -32,7 +32,10 @@ function Nav(props){
   }
 
   const reCaptchaCallback = (token) => {
-    token && (window.location.href = 'https://drive.google.com/file/d/15ErcrzU48qB-4L8gW_Asb9j2OsvfwEH8/view?usp=sharing')
+    if (token) {
+      setMargin('-8%')
+      window.location.href = 'https://drive.google.com/file/d/15ErcrzU48qB-4L8gW_Asb9j2OsvfwEH8/view?usp=sharing'
+    }
   }
 
   return(

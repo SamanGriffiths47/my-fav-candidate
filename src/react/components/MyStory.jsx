@@ -24,7 +24,7 @@ export default function MyStory (props){
               keyboard touch
             >
               <Carousel.Item>
-                <section className='carouselSec'><img className='carouselAni' src={thenAni} alt='Me As A Chef'/></section>
+                <div className='carouselSec'><img className='carouselAni' src={thenAni} alt='Me As A Chef'/></div>
                 <Carousel.Caption>
                 <h1>Who I Was</h1>
                 <p>
@@ -39,7 +39,7 @@ export default function MyStory (props){
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
-              <section className='carouselSec'><img className='carouselAni' src={nowAni} alt='Me Studying My Craft'/></section>
+              <div className='carouselSec'><img className='carouselAni' src={nowAni} alt='Me Studying My Craft'/></div>
                 <Carousel.Caption>
                 <h1>Who I Am</h1>
                 <p>
@@ -55,7 +55,7 @@ export default function MyStory (props){
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
-              <section className='carouselSec'><img className='carouselAni' src={laterAni} alt='Robotics'/></section>
+              <div className='carouselSec'><img className='carouselAni' src={laterAni} alt='Robotics'/></div>
                 <Carousel.Caption>
                   <h1>Who I Will Be</h1>
                   <p>

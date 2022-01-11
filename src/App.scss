@@ -1,8 +1,14 @@
+:root {
+  --text: 1vw;
+  --navTxt: calc(1vh + 1.3vw);
+}
+
 .hasBootstrap {
   @import '../node_modules/bootstrap/scss/bootstrap';
 }
 
 .carouselSec {
+  grid-area: 1/1/2/2;
   width: 100%;
   height: 100%;
   display: flex;
@@ -23,12 +29,12 @@
 .carousel-item-next,
 .carousel-item-prev {
   display: grid !important;
-  grid-template: 40% 60% / 1fr !important;
+  grid-template: calc(var(--navTxt) * 10) auto / 1fr !important;
   background-color: var(--cardBckgrnd) !important;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  border-top-right-radius: 2.5em;
-  border-bottom-right-radius: 2.5em;
+  border-top-right-radius: 2.1em;
+  border-bottom-right-radius: 2.1em;
 }
 .carousel-inner {
   height: 100%;
@@ -42,27 +48,27 @@
 .active.carousel-item-start {
   transform: rotateY(180deg) !important;
 }
+.carousel-caption {
+  position: relative !important;
+  display: inline-block;
+  grid-area: 2/1/3/2;
+  width: 70%;
+}
 .carousel-caption p * {
-  // color: var(--cardColor);
   line-height: 1.2em !important;
   text-align: justify !important;
 }
 .carousel-caption p {
-  // color: var(--cardColor);
   line-height: 1.2em !important;
   text-align: justify !important;
 }
 .carousel-caption h1 {
-  // color: var(--cardColor);
   font-size: 1.5em !important;
-  margin-bottom: 0.5em !important;
+  margin: 0.5em 0 !important;
   text-shadow: var(--txtBxShdw) !important;
 }
-/* Page Level */
-:root {
-  --text: 1vw;
-}
 
+/* Page Level */
 html,
 body {
   margin: 0;
@@ -112,7 +118,7 @@ video {
 }
 #resume {
   font-family: inherit;
-  font-size: calc(1vh + 1.3vw);
+  font-size: var(--navTxt);
   margin: 0;
   padding: 0;
   text-decoration: underline;
@@ -148,7 +154,7 @@ nav {
   padding: 0 8vw;
   box-shadow: var(--navBxShdw);
   background: var(--navBckgrnd);
-  font-size: calc(1vh + 1.3vw);
+  font-size: var(--navTxt);
   grid-area: 1/1/2/2;
   display: flex;
   justify-content: space-between;
@@ -532,9 +538,9 @@ h3 {
   .carousel-item.active,
   .carousel-item-next,
   .carousel-item-prev {
-    border-top-left-radius: 1em;
+    border-top-left-radius: 1.2em;
     border-bottom-left-radius: 0;
-    border-top-right-radius: 1em;
+    border-top-right-radius: 1.2em;
     border-bottom-right-radius: 0;
   }
   #attrCont {
