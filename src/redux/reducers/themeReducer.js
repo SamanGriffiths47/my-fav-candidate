@@ -84,10 +84,10 @@ const iState = {
       // Theme Icon
       '--iconBxShdw': 'rgb(157,157,157)',
       '--iconMargin': /Chrome/.test(navigator.userAgent)
-        ? '0 5vh 0 0'
+        ? '0 5vw 0 0'
         : /Safari/.test(navigator.userAgent)
-        ? '0 0 0 -5vh'
-        : '0 5vh 0 0',
+        ? '0 0 0 -5vw'
+        : '0 5vw 0 0',
       '--moonOp': '1',
       '--sunOp': '0',
       '--rayH': '3vh',
@@ -150,10 +150,10 @@ const iState = {
       // Theme Icon
       '--iconBxShdw': 'rgb(255, 195, 14)',
       '--iconMargin': /Chrome/.test(navigator.userAgent)
-        ? '0 0 0 5vh'
+        ? '0 0 0 5vw'
         : /Safari/.test(navigator.userAgent)
         ? '0 0 0 0'
-        : '0 0 0 5vh',
+        : '0 0 0 5vw',
       '--moonOp': '0',
       '--sunOp': '1',
       '--rayH': '7.5vh',
