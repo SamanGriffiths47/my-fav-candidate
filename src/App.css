@@ -22,7 +22,6 @@ main {
   right: 0;
   bottom: 0;
   min-width: 100%;
-  /* min-height: 92%; */
   overflow-y: scroll;
   display: flex;
   align-items: center;
@@ -49,7 +48,13 @@ video {
   width: 100%;
 }
 #resume {
+  font-family: inherit;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
   text-decoration: underline;
+  background: none;
+  border: none;
 }
 a,
 #resume {
@@ -108,7 +113,6 @@ nav {
   align-items: center;
   width: auto;
   height: 4vh;
-  /* margin-left: auto; */
 }
 #btnSlider {
   height: 2vh;

@@ -6,7 +6,6 @@ import btnSlider from '../../images/btnSlider.png'
 const options = { hour12: false }
 const time = new Date().toLocaleString('en-US', options).split(', ')[1]
 const hour = parseInt(time.slice(0, 2))
-console.log(navigator.userAgent)
 
 const iState = {
   authenticated: false,

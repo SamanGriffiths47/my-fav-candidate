@@ -3,7 +3,6 @@ import { Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 import Nav from './react/components/Nav'
 import Projects from './react/pages/Projects'
-import Home from './react/pages/Home'
 import AjScreenshot from './images/screenshots/asteroidJuggler.png'
 import AjAni from './images/animations/aj.png'
 import TttScreenshot from './images/screenshots/tickTacToe.png'
@@ -18,7 +17,7 @@ import TlScreenshot from './images/screenshots/tmdbLibrary.png'
 import TlAni from './images/animations/tl.png'
 import TrScreenshot from './images/screenshots/tmdbReThunk.png'
 import TrAni from './images/animations/tr.png'
-import Protection from './react/pages/Protection'
+import Home from './react/pages/Home'
 
 const mapStateToProps = ({ themeState }) => {
   return { themeState }
@@ -123,7 +122,6 @@ function App(props) {
         <Route exact path="/" render={(props) => <Home {...props} />} />
         <Route
           path="/projects"
-          // render={(props) => <Protection pieces={pieces} {...props} />}
           render={(props) => <Projects pieces={pieces} {...props} />}
         />
       </main>

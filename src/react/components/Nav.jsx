@@ -24,11 +24,11 @@ function Nav(props){
     : props.initLightMode()
   }
 
-  const [margin, setMargin] = useState('-150%')
+  const [margin, setMargin] = useState('-8%')
 
   function onClick (e){
     e.preventDefault()
-    margin === '10vh' ? setMargin('-150%') : setMargin('10vh')
+    margin === '10vh' ? setMargin('-8%') : setMargin('10vh')
   }
 
   const reCaptchaCallback = (token) => {
@@ -52,11 +52,11 @@ function Nav(props){
         <Link to="/projects" id="navProjects">
           Projects
         </Link>
-        <a
+        <button
         onClick={onClick}
         id="resume">
         Resume
-        </a>
+        </button>
         <a
           href='https://www.linkedin.com/in/saman-khaliq/'
           rel="noreferrer"
