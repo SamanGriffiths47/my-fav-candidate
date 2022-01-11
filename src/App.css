@@ -43,10 +43,8 @@ main {
   overflow: hidden;
 }
 #background > * {
-  height: 101%;
-  width: 101%;
-}
-#vid0 {
+  height: 103%;
+  width: 103%;
 }
 video {
   object-fit: fill;
