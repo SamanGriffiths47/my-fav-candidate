@@ -144,6 +144,7 @@ nav {
   align-items: center;
   border: none;
   height: 2vh;
+  width: 2vh;
 }
 #iconBtn > * {
   position: inherit;
