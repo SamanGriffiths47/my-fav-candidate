@@ -113,7 +113,14 @@ function App(props) {
       <Nav styles={styles} {...props} />
       <div id="background">
         {[1, 1, 1, 1].map((video, i) => (
-          <video key={bckgrndVid + i} playsInline autoPlay muted loop>
+          <video
+            key={bckgrndVid + i}
+            id={`vid${i}`}
+            playsInline
+            autoPlay
+            muted
+            loop
+          >
             <source src={bckgrndVid} type="video/mp4" />
           </video>
         ))}
