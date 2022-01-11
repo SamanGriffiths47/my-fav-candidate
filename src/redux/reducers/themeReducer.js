@@ -154,7 +154,7 @@ const iState = {
       '--iconMargin': window.chrome
         ? '0 0 0 calc(4vh + 3vw)'
         : /Safari/.test(navigator.userAgent)
-        ? '0 0 0 0'
+        ? '0 0 0 calc(1vh + 0.75vw)'
         : '0 0 0 calc(4vh + 3vw)',
       '--moonOp': '0',
       '--sunOp': '1',
