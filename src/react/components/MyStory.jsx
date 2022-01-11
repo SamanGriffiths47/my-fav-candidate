@@ -2,30 +2,48 @@ import thenAni from '../../images/animations/then.png'
 import nowAni from '../../images/animations/now.png'
 import laterAni from '../../images/animations/later.png'
 import Carousel from 'react-bootstrap/Carousel'
+import { useState } from 'react';
 
 export default function MyStory (props){
+  const [i, setIndex] = useState(0)
+
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex)
+  }
+
+  const titles = ['Who I Was', 'Who I Am', 'Who I Will Be']
   return(
   <div id='backstory' className='hasBootstrap'>
-            <Carousel pause='hover' keyboard touch slide wrap>
+            <Carousel 
+              prevLabel={i === 0 ? titles[2] : titles[i - 1]}
+              nextLabel={i === 2 ? titles[0] : titles[i + 1]}
+              activeIndex={i}
+              onSelect={handleSelect}
+              pause='hover'
+              keyboard touch slide
+            >
               <Carousel.Item>
                 <section className='carouselSec'><img className='carouselAni' src={thenAni} alt='Me As A Chef'/></section>
                 <Carousel.Caption>
-                <h1>Then</h1>
+                <h1>Who I Was</h1>
                 <p>dsafdsa</p>
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
               <section className='carouselSec'><img className='carouselAni' src={nowAni} alt='Me Studying My Craft'/></section>
                 <Carousel.Caption>
-                <h1>Now</h1>
+                <h1>Who I Am</h1>
                 <p>dvdsfds</p>
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
               <section className='carouselSec'><img className='carouselAni' src={laterAni} alt='Robotics'/></section>
                 <Carousel.Caption>
-                <h1>Later</h1>
-                <p>dsafdsfa</p>
+                <h1>Who I Will Be</h1>
+                <p>Though I <i>am</i> young and excited to work in any sector of the industry, I dream of working my way up to being on
+              the cutting edge of A.I. development in the next ten years. I'm fully prepared to spend that decade pushing the envelope
+              at a company while utilizing my free time to go back to school and independently learn the skills necessary to make my dream
+              come true!</p>
                 </Carousel.Caption>
               </Carousel.Item>
             </Carousel>

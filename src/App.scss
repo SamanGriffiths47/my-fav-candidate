@@ -66,11 +66,11 @@ body {
   overflow: hidden;
 }
 body {
-  font-family: Arial, Helvetica, sans-serif !important;
-  font-size: var(--text) !important;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: var(--text);
 }
 * {
-  transition: 0.5s all, 0s font-size !important;
+  transition: 0.5s all, 0s font-size;
   color: var(--textColor);
 }
 #appDiv {
@@ -109,7 +109,7 @@ video {
 }
 #resume {
   font-family: inherit;
-  font-size: calc(1vh + 1.3vw) !important;
+  font-size: calc(1vh + 1.3vw);
   margin: 0;
   padding: 0;
   text-decoration: underline;
@@ -118,19 +118,18 @@ video {
 }
 a,
 #resume {
-  color: inherit !important;
   text-shadow: 0 0 1vh var(--iconBxShdw);
   transition: 0.2s;
 }
 a:hover,
 #resume:hover {
   text-shadow: 0 0 1.5vh var(--aShadow);
-  color: var(--aHover) !important;
+  color: var(--aHover);
 }
 a:active,
 #resume:active {
   text-shadow: 0 0 4vh var(--aShadow);
-  color: var(--aActive) !important;
+  color: var(--aActive);
 }
 
 /* Nav Bar */
