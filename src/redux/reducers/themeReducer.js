@@ -6,6 +6,8 @@ import btnSlider from '../../images/btnSlider.png'
 const options = { hour12: false }
 const time = new Date().toLocaleString('en-US', options).split(', ')[1]
 const hour = parseInt(time.slice(0, 2))
+console.log(navigator.userAgent)
+console.log(window.chrome)
 
 const iState = {
   authenticated: false,
@@ -83,11 +85,11 @@ const iState = {
         ')',
       // Theme Icon
       '--iconBxShdw': 'rgb(157,157,157)',
-      '--iconMargin': /Chrome/.test(navigator.userAgent)
-        ? '0 5vw 0 0'
+      '--iconMargin': window.chrome
+        ? '0 calc(2vh + 3vw) 0 0'
         : /Safari/.test(navigator.userAgent)
-        ? '0 0 0 -5vw'
-        : '0 5vw 0 0',
+        ? '0 0 0 calc(-2vh - 3vw)'
+        : '0 calc(2vh + 3vw) 0 0',
       '--moonOp': '1',
       '--sunOp': '0',
       '--rayH': '3vh',
@@ -149,11 +151,11 @@ const iState = {
       '--navBxShdw': '0 0 5vw 0 rgb(255, 195, 14)',
       // Theme Icon
       '--iconBxShdw': 'rgb(255, 195, 14)',
-      '--iconMargin': /Chrome/.test(navigator.userAgent)
-        ? '0 0 0 5vw'
+      '--iconMargin': window.chrome
+        ? '0 0 0 calc(4vh + 3vw)'
         : /Safari/.test(navigator.userAgent)
         ? '0 0 0 0'
-        : '0 0 0 5vw',
+        : '0 0 0 calc(4vh + 3vw)',
       '--moonOp': '0',
       '--sunOp': '1',
       '--rayH': '7.5vh',

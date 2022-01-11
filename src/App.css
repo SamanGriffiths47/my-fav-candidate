@@ -132,6 +132,7 @@ nav {
 }
 #btnSlider {
   height: 2vh;
+  width: calc(4vh + 3vw);
 }
 #iconBtn {
   box-shadow: 0 0 5vw 1.5vw var(--iconBxShdw);
