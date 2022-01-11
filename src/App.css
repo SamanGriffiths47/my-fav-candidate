@@ -43,8 +43,8 @@ main {
   overflow: hidden;
 }
 #background > * {
-  height: 103%;
-  width: 103%;
+  height: 101%;
+  width: 101%;
 }
 video {
   object-fit: fill;
@@ -486,5 +486,9 @@ h3 {
   .logoCont {
     width: 4vw;
     height: 4vw;
+  }
+  .logoCont:hover {
+    width: 4.75vw;
+    height: 4.75vw;
   }
 }
