@@ -20,30 +20,34 @@ body {
 #appDiv {
   height: 100vh;
   width: 100vw;
+  display: grid;
+  grid-template: 8% 92% / 1fr;
 }
 main {
   flex-direction: column;
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
+  /* position: fixed; */
+  /* right: 0; */
+  /* bottom: 0; */
+  /* min-width: 100%; */
+  grid-area: 2/1/3/2;
   overflow-y: scroll;
   display: flex;
   align-items: center;
   color: white;
   width: 100%;
-  height: 92%;
+  height: 100%;
 }
 #background {
   z-index: 2;
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 92%;
+  grid-area: 2/1/3/2;
+  /* position: fixed; */
+  /* right: 0; */
+  /* bottom: 0; */
+  /* min-width: 100%; */
+  /* min-height: 92%; */
   grid-template: 50% 50% / 50% 50%;
   display: grid;
-  height: 92%;
+  height: 100%;
   width: 100%;
   z-index: -1;
 }
@@ -79,10 +83,11 @@ a:active,
 
 /* Nav Bar */
 nav {
+  grid-area: 1/1/2/2;
   display: grid;
   grid-template: 1fr / 1fr;
-  height: 8%;
-  max-height: 8%;
+  height: 100%;
+  max-height: 100%;
   position: relative;
 }
 #linkSec {
