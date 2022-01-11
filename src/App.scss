@@ -15,9 +15,16 @@
 .carouselAni {
   height: 100%;
 }
+.carousel-item {
+  transition-duration: 0.8s !important;
+  height: 100%;
+}
 .carousel-item.active,
 .carousel-item-next,
 .carousel-item-prev {
+  display: grid !important;
+  grid-template: 40% 60% / 1fr !important;
+  background-color: var(--cardBckgrnd) !important;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   border-top-right-radius: 2.5em;
@@ -26,21 +33,30 @@
 .carousel-inner {
   height: 100%;
 }
+.carousel-item-next:not(.carousel-item-start),
+.active.carousel-item-end {
+  transform: rotateY(180deg) !important;
+}
+
+.carousel-item-prev:not(.carousel-item-end),
+.active.carousel-item-start {
+  transform: rotateY(180deg) !important;
+}
 .carousel-caption p * {
   // color: var(--cardColor);
-  line-height: 1.2em;
-  text-align: justify;
+  line-height: 1.2em !important;
+  text-align: justify !important;
 }
 .carousel-caption p {
   // color: var(--cardColor);
-  line-height: 1.2em;
-  text-align: justify;
+  line-height: 1.2em !important;
+  text-align: justify !important;
 }
 .carousel-caption h1 {
   // color: var(--cardColor);
-  font-size: 1.5em;
-  margin-bottom: 0.5em;
-  text-shadow: var(--txtBxShdw);
+  font-size: 1.5em !important;
+  margin-bottom: 0.5em !important;
+  text-shadow: var(--txtBxShdw) !important;
 }
 /* Page Level */
 :root {
