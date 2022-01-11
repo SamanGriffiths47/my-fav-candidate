@@ -20,30 +20,52 @@ export default function MyStory (props){
               activeIndex={i}
               onSelect={handleSelect}
               pause='hover'
-              keyboard touch slide
+              interval={null}
+              keyboard touch
             >
               <Carousel.Item>
                 <section className='carouselSec'><img className='carouselAni' src={thenAni} alt='Me As A Chef'/></section>
                 <Carousel.Caption>
                 <h1>Who I Was</h1>
-                <p>dsafdsa</p>
+                <p>
+                  I had an admittedly rough start. I was adopted at two years old by a Caucasian, lesbian couple, which obviously contributed
+                  to a... unique experience growing up. I love them and my brother (by blood:we were a package deal, haha) more than anything else
+                  in this life. That said, my lack of role models (both male and black) led me down a confusing path, which ultimately had me
+                  being an active gang member and drug dealer. Only when I began to work, at the age of sixteen, did I receive the mentorship I needed
+                  to start to mature into a man of substance. I've always bugged my managers into taking me under their wings, haha. Because of
+                  this, I gained the skills necessary to be given a managerial title in the restaurant industry by nineteen years old. A title I maintained
+                  until my recent pilgrimage into the tech industry.
+                </p>
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
               <section className='carouselSec'><img className='carouselAni' src={nowAni} alt='Me Studying My Craft'/></section>
                 <Carousel.Caption>
                 <h1>Who I Am</h1>
-                <p>dvdsfds</p>
+                <p>
+                  In just 6 months I went from a novice to experienced enough to build 7 web apps from the bottom
+                  up while honing the ability to work in a team setting for the benefit of the current project. It was during this chrysalis-like
+                  stage in my development as an engineer that I fell completely smitten with the minutiae of this industry. Synthesizing
+                  low-latency recursive algorithms, cleaning up messy codebases with object-oriented programing (to keep them as D.R.Y as
+                  possible), painstakingly testing responsive web designs, B.I.F.I.R (Break It, Fix It, Repeat) as many times as it takes
+                  to make it right. These are all skills that I have far from perfected, but my progress in their regard has been
+                  personally breath-taking and I know that my infatuation with them will bring me as close to perfection as I can
+                  get.
+                </p>
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
               <section className='carouselSec'><img className='carouselAni' src={laterAni} alt='Robotics'/></section>
                 <Carousel.Caption>
-                <h1>Who I Will Be</h1>
-                <p>Though I <i>am</i> young and excited to work in any sector of the industry, I dream of working my way up to being on
-              the cutting edge of A.I. development in the next ten years. I'm fully prepared to spend that decade pushing the envelope
-              at a company while utilizing my free time to go back to school and independently learn the skills necessary to make my dream
-              come true!</p>
+                  <h1>Who I Will Be</h1>
+                  <p>
+                  Though I <i>am</i> young and excited to work in any sector of the industry, I dream of working my way up to being on the cutting
+                  edge of A.I. development in the next ten years. That and robotics programming are fields that excite me to the core in an inexplicable
+                  way. Ever the innovator, I think the chance to make a mark in a young technology that will undoubtedly drive the development of human
+                  civilization forward is all but irresistible to me. I've already purchased Udemy courses on machine learning and C/C++ because, as I
+                  understand it, that is the industry-standard production language in that sector. I am fully prepared to spend that decade pushing the
+                  envelope at a company while utilizing my free time to return to school and independently learn the skills necessary to make my dream come true!
+                  </p>
                 </Carousel.Caption>
               </Carousel.Item>
             </Carousel>

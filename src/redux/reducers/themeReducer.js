@@ -83,6 +83,7 @@ const iState = {
         'rgba(0, 0, 40, 0.8),' +
         'rgba(11, 37, 110, 0.8)' +
         ')',
+      '--cardBckgrnd': 'rgba(0, 0, 40, 0.5)',
       // Theme Icon
       '--iconBxShdw': 'rgb(157,157,157)',
       '--iconMargin': window.chrome
@@ -166,8 +167,10 @@ const iState = {
         'linear-gradient(' +
         'to top right,' +
         'rgba(49, 135, 214, 0.8),' +
-        'rgba(161, 214, 249, 0.8)' +
+        'rgba(161, 214, 249, 0.5)' +
         ')',
+      '--cardBckgrnd': 'rgba(49, 135, 214, 0.3)',
+      '--cardColor': 'rgb(255, 191, 0)',
       // Project Display
       '--hoverOver': 'rgba(255, 255, 255, 0.7)',
       // Screenshot Container
