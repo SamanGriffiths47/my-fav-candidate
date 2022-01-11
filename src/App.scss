@@ -1,3 +1,60 @@
+.hasBootstrap {
+  @import '../node_modules/bootstrap/scss/bootstrap';
+  // @import '../node_modules/bootstrap/scss/_functions';
+  // @import '../node_modules/bootstrap/scss/_variables';
+  // @import '../node_modules/bootstrap/scss/_mixins';
+  // @import '../node_modules/bootstrap/scss/_root';
+  // @import '../node_modules/bootstrap/scss/_reboot';
+  // @import '../node_modules/bootstrap/scss/_type';
+  // @import '../node_modules/bootstrap/scss/_images';
+  // @import '../node_modules/bootstrap/scss/_code';
+  // @import '../node_modules/bootstrap/scss/_grid';
+  // @import '../node_modules/bootstrap/scss/_tables';
+  // @import '../node_modules/bootstrap/scss/_forms';
+  // @import '../node_modules/bootstrap/scss/_buttons';
+  // @import '../node_modules/bootstrap/scss/_transitions';
+  // @import '../node_modules/bootstrap/scss/_dropdown';
+  // @import '../node_modules/bootstrap/scss/_button-group';
+  // @import '../node_modules/bootstrap/scss/_input-group';
+  // @import '../node_modules/bootstrap/scss/_custom-forms';
+  // @import '../node_modules/bootstrap/scss/_nav';
+  // @import '../node_modules/bootstrap/scss/_navbar';
+  // @import '../node_modules/bootstrap/scss/_card';
+  // @import '../node_modules/bootstrap/scss/_breadcrumb';
+  // @import '../node_modules/bootstrap/scss/_pagination';
+  // @import '../node_modules/bootstrap/scss/_badge';
+  // @import '../node_modules/bootstrap/scss/_jumbotron';
+  // @import '../node_modules/bootstrap/scss/_alert';
+  // @import '../node_modules/bootstrap/scss/_progress';
+  // @import '../node_modules/bootstrap/scss/_media';
+  // @import '../node_modules/bootstrap/scss/_list-group';
+  // @import '../node_modules/bootstrap/scss/_close';
+  // @import '../node_modules/bootstrap/scss/_toasts';
+  // @import '../node_modules/bootstrap/scss/_modal';
+  // @import '../node_modules/bootstrap/scss/_tooltip';
+  // @import '../node_modules/bootstrap/scss/_popover';
+  // @import '../node_modules/bootstrap/scss/_carousel';
+  // @import '../node_modules/bootstrap/scss/_spinners';
+  // @import '../node_modules/bootstrap/scss/_utilities';
+}
+
+.carouselSec {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carouselAni {
+  // width: 100%;
+  height: 100%;
+}
+.carousel {
+  height: 100%;
+}
+.carousel-inner {
+  height: 100%;
+}
 /* Page Level */
 :root {
   --text: 1vw;
@@ -9,12 +66,11 @@ body {
   overflow: hidden;
 }
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-text-stroke-color: white;
-  font-size: var(--text);
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: var(--text) !important;
 }
 * {
-  transition: 0.5s all, 0s font-size;
+  transition: 0.5s all, 0s font-size !important;
   color: var(--textColor);
 }
 #appDiv {
@@ -53,7 +109,7 @@ video {
 }
 #resume {
   font-family: inherit;
-  font-size: 1em;
+  font-size: calc(1vh + 1.3vw) !important;
   margin: 0;
   padding: 0;
   text-decoration: underline;
@@ -62,18 +118,19 @@ video {
 }
 a,
 #resume {
+  color: inherit !important;
   text-shadow: 0 0 1vh var(--iconBxShdw);
   transition: 0.2s;
 }
 a:hover,
 #resume:hover {
   text-shadow: 0 0 1.5vh var(--aShadow);
-  color: var(--aHover);
+  color: var(--aHover) !important;
 }
 a:active,
 #resume:active {
   text-shadow: 0 0 4vh var(--aShadow);
-  color: var(--aActive);
+  color: var(--aActive) !important;
 }
 
 /* Nav Bar */
@@ -89,7 +146,7 @@ nav {
   padding: 0 8vw;
   box-shadow: var(--navBxShdw);
   background: var(--navBckgrnd);
-  font-size: calc((1vh + 1.3vw));
+  font-size: calc(1vh + 1.3vw) !important;
   grid-area: 1/1/2/2;
   display: flex;
   justify-content: space-between;
@@ -162,7 +219,7 @@ nav {
 /* Project Display */
 .instructions {
   padding: 2vh 2vh 0 2vh;
-  font-size: calc(1vh + 1.5vw);
+  font-size: calc(1vh + 1.5vw) !important;
   text-align: center;
 }
 .pRow {
@@ -191,7 +248,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3vw;
+  font-size: 3vw !important;
   height: 100%;
   width: 100%;
   grid-area: 1/1/2/2;
@@ -211,7 +268,7 @@ nav {
 .linkDiv {
   height: 90%;
   width: 100%;
-  font-size: 2vw;
+  font-size: 2vw !important;
   position: relative;
   grid-area: 1/1/2/2;
 }
@@ -252,7 +309,7 @@ nav {
 
 /* Greeting */
 #greeting {
-  font-size: calc(var(--text) * 3);
+  font-size: calc(var(--text) * 3) !important;
   margin: 5vw;
 }
 .header {
@@ -280,6 +337,7 @@ nav {
   align-items: center;
   background: var(--aniDivBckgrnd);
   padding: 3vw;
+  font-size: 0.9em !important;
 }
 /* Attributes */
 #attributes {
@@ -371,7 +429,7 @@ nav {
 
 /* Poke Badges */
 #pokeBadges {
-  font-size: 1.2em;
+  font-size: 1.2em !important;
   margin: 3vw 10vw 6vw 10vw;
   padding: 2vw 2vw;
   width: 50vw;
@@ -456,7 +514,7 @@ h3 {
     --text: 2vw;
   }
   #greeting {
-    font-size: calc(var(--text) * 2.5);
+    font-size: calc(var(--text) * 2.5) !important;
   }
   #info {
     grid-template: auto auto / 1fr;
@@ -477,7 +535,6 @@ h3 {
   #pokeBadges {
     margin: 0 7vw 7vw 7vw;
     width: auto;
-    /* font-size: var(--text); */
   }
   .logoDiv {
     width: 19.75vw;

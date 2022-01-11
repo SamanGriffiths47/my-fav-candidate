@@ -1,4 +1,4 @@
-import './App.css'
+import './App.scss'
 import { Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 import Nav from './react/components/Nav'

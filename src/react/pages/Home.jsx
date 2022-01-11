@@ -38,6 +38,7 @@ import regexDark from '../../images/pokebadges/regexDark.png'
 import aws from '../../images/pokebadges/aws.jpeg'
 import gcp from '../../images/pokebadges/GCP.jpeg'
 import git from '../../images/pokebadges/git.png'
+import MyStory from '../components/MyStory'
 
 
 const mapStateToProps = ({ themeState }) => {
@@ -158,24 +159,7 @@ function Home(props){
             }) }
           </div>
         </section>
-          <div id='backstory'>
-            <h2 align='justify'>
-              I am a Software Engineer! Wow, that feels so great to say after quitting my stable job as a Kitchen
-              Manager, spending 4 months grinding 12+ hrs a day in the General Assembly Bootcamp, and working since then to polish my
-              portfolio, teach myself new skills, and apply to positions. In 6 months I built 7 web apps from the bottom
-              up, getting comfortable working in a team setting for the benefit of the current project. It was during this chrysalis-like
-              stage in my development as an engineer that I fell completely smitten with the minutiae of this industry. Synthesizing
-              low-latency recursive algorithms, cleaning up messy codebases with object-oriented programing (to keep them as D.R.Y as
-              possible), painstakingly testing responsive web designs, B.I.F.I.R (Break It, Fix It, Repeat) as many times as it takes
-              to make it right. These are all skills that I have far from perfected, but my progress in their regard has been
-              personally breath-taking and I know that my infatuation with them will bring me as close to perfection as I can
-              get. Though I <i>am</i> young and excited to work in any sector of the industry, I dream of working my way up to being on
-              the cutting edge of A.I. development in the next ten years. I'm fully prepared to spend that decade pushing the envelope
-              at a company while utilizing my free time to go back to school and independently learn the skills necessary to make my dream
-              come true! Please feel free to peruse my portfolio and projects, don't hesitate to let me know what you think. Thank you
-              for taking time out of your day to check out my work! 😄
-            </h2>
-          </div>
+        <MyStory/>
       </section>
       <section id='pokeBadges'>
         <h2>Technological Proficiencies</h2>
