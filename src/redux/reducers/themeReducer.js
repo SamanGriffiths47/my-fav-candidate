@@ -23,7 +23,7 @@ const iState = {
       reason:
         'My old boss nicknamed me sponge because of my aptitude for learning, haha! While it is a funny' +
         ' situation, it does go to show my history of being adaptable, and astute.',
-      lvl: 96,
+      lvl: 92,
       seen: false
     },
     {
