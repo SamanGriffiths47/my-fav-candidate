@@ -167,7 +167,7 @@ const iState = {
         'linear-gradient(' +
         'to top right,' +
         'rgba(49, 135, 214, 0.8),' +
-        'rgba(161, 214, 249, 0.5)' +
+        'rgba(161, 214, 249, 0.8)' +
         ')',
       '--cardBckgrnd': 'rgba(49, 135, 214, 0.3)',
       '--cardColor': 'rgb(255, 191, 0)',

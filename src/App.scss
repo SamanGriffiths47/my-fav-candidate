@@ -30,7 +30,7 @@
 .carousel-item-prev {
   display: grid !important;
   grid-template: calc(var(--navTxt) * 10) auto / 1fr !important;
-  background-color: var(--cardBckgrnd) !important;
+  background: var(--cardBckgrnd) !important;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   border-top-right-radius: 2.1em;
