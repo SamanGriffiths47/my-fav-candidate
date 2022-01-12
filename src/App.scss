@@ -318,14 +318,10 @@ nav {
 /* Greeting */
 #greeting {
   font-size: calc(var(--text) * 3);
-  margin: 5vw;
+  margin: 7vw 0;
 }
 .header {
   text-shadow: 0 0 1vh var(--iconBxShdw);
-}
-#greetingImg {
-  width: 12vw;
-  margin-bottom: 5vw;
 }
 /* About Me */
 #aboutMe {
@@ -409,19 +405,19 @@ nav {
   animation-iteration-count: 1;
 }
 .l1 {
-  animation: load 1.5s linear;
+  animation: load 1.52s linear;
   animation-iteration-count: 1;
 }
 .l2 {
-  animation: load 1.1s linear;
+  animation: load 1.23s linear;
   animation-iteration-count: 1;
 }
 .l3 {
-  animation: load 1.5s linear;
+  animation: load 1.51s linear;
   animation-iteration-count: 1;
 }
 .l4 {
-  animation: load 1.7s linear;
+  animation: load 1.74s linear;
   animation-iteration-count: 1;
 }
 
@@ -437,10 +433,9 @@ nav {
 
 /* Poke Badges */
 #pokeBadges {
-  font-size: 1.2em;
   margin: 3vw 10vw 6vw 10vw;
-  padding: 2vw 2vw;
-  width: 50vw;
+  padding: 2vw 3vw;
+  width: 66vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -453,6 +448,10 @@ h5 {
   margin: 0;
   padding: 0;
 }
+#pokeBadges h5 {
+  margin-bottom: 1vw;
+}
+
 #pokeBadges h2,
 h3 {
   text-shadow: 0 0 1vh var(--iconBxShdw);
@@ -462,12 +461,14 @@ h3 {
   margin: 1vw 0;
 }
 #pokeBadges h3 {
+  font-size: 1.1em;
   margin: 0;
   text-align: left;
   width: 100%;
 }
 #pokeBadges p {
   margin: auto;
+  font-size: 0.8em;
   text-align: center;
   vertical-align: middle;
 }
@@ -478,7 +479,7 @@ h3 {
   align-items: center;
 }
 .logoDiv {
-  width: 10vw;
+  width: 6vw;
   display: grid;
   grid-template: 50% 50% / auto;
   height: 7vw;
@@ -487,16 +488,16 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 2.5vw;
-  height: 2.5vw;
-  border: outset var(--logoBorder) 0.5vw;
+  width: 1.5vw;
+  height: 1.5vw;
+  border: outset var(--logoBorder) 0.3vw;
   background: var(--logoBckgrnd);
   box-shadow: 0 0 2vw -0.2vw var(--pbBxShdw);
   margin: 0 auto;
 }
 .logoCont:hover {
-  width: 3vw;
-  height: 3vw;
+  width: 2vw;
+  height: 2vw;
   box-shadow: 0 0 2vw -0.2vw var(--pbBxShdwHvr);
 }
 .logoImg {
@@ -523,6 +524,7 @@ h3 {
   }
   #greeting {
     font-size: calc(var(--text) * 2.5);
+    margin: 10vw 0 12vw 0;
   }
   #info {
     grid-template: auto auto / 1fr;
@@ -555,15 +557,16 @@ h3 {
     width: auto;
   }
   .logoDiv {
-    width: 19.75vw;
+    width: 15vw;
     height: 10vw;
   }
   .logoCont {
-    width: 4vw;
-    height: 4vw;
+    width: 2.5vw;
+    height: 2.5vw;
+    border: outset var(--logoBorder) 0.5vw;
   }
   .logoCont:hover {
-    width: 4.75vw;
-    height: 4.75vw;
+    width: 4vw;
+    height: 4vw;
   }
 }

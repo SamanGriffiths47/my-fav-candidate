@@ -61,12 +61,12 @@ const iState = {
     }
   ],
   TOD:
-    hour > 0 && hour < 11
+    hour > 3 && hour < 11
       ? 'Morning'
       : hour >= 11 && hour < 17
       ? 'Afternoon'
       : 'Evening',
-  theme: hour >= 17 ? false : true,
+  theme: hour >= 17 || hour <= 3 ? false : true,
   darkMode: {
     reCapTheme: 'dark',
     var: {
