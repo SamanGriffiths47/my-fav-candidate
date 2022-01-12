@@ -142,7 +142,6 @@ function Home(props){
       <h1 id ='greeting' className='header' align='center'>
         Good {TOD}! My Name is Sam'an!
       </h1>
-      {/* <img id ='greetingImg' src={greeting} alt="Animation Of Me Saying Hi"/> */}
       <section id ='info'>
         <section id = 'attrCont'>
           <div id ='attributes'>

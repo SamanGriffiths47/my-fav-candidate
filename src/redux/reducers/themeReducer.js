@@ -31,11 +31,11 @@ const iState = {
     {
       title: 'Communication',
       reason:
-        "This one is kind of a mixed bag and depends on what you're looking for. When a best" +
-        " practice of committing often is established, I'm good at following it. I do, however, have" +
-        ` a slight tendency to "overshare." Some people like it, some don't. I just know that I'd rather` +
-        ' receive too much information from a subordinate than too little, so I try to give superiors' +
-        ' that same courtesy.',
+        `This one is kind of a mixed bag and depends on what you're looking for. When a best` +
+        ` practice of committing often is established, I'm good at following it. I'm also an experienced writer` +
+        ` and public speaker. I do, however, have a slight tendency to "overshare." Some people like it,` +
+        ` some don't. I just know that I'd rather receive too much information from my team than too` +
+        ` little, so I try to give my teamates that same courtesy.`,
       lvl: 78,
       seen: false
     },
