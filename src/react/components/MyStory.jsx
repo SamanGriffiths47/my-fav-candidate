@@ -5,7 +5,7 @@ import Carousel from 'react-bootstrap/Carousel'
 import { useState } from 'react';
 
 export default function MyStory (props){
-  const [i, setIndex] = useState(0)
+  const [i, setIndex] = useState(1)
 
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex)
