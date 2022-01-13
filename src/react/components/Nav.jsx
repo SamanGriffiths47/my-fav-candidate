@@ -34,7 +34,7 @@ function Nav(props){
   const reCaptchaCallback = (token) => {
     if (token) {
       setMargin('-8%')
-      window.location.href = 'https://drive.google.com/file/d/15ErcrzU48qB-4L8gW_Asb9j2OsvfwEH8/view?usp=sharing'
+      window.location.href = 'https://drive.google.com/file/d/1oLjH-8tv2OgplpQ4QXRIS4ARHyVt7ZIR/view?usp=sharing'
     }
   }
 

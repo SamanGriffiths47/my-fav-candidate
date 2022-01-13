@@ -44,7 +44,7 @@ function App(props) {
     AjScreenshot,
     AjAni,
     'Animation of Me In Space',
-    'https://github.com/SamanGriffiths47/Asteroid_Juggler'
+    'https://github.com/samanhg47/Asteroid_Juggler'
   )
 
   const tickTacToe = new Project(
@@ -52,7 +52,7 @@ function App(props) {
     TttScreenshot,
     TttAni,
     'Animation of Me Playing Tic Tac Toe',
-    'https://github.com/SamanGriffiths47/Tick-Tac-Toe'
+    'https://github.com/samanhg47/Tick-Tac-Toe'
   )
 
   const simpleAdditions = new Project(
@@ -60,7 +60,7 @@ function App(props) {
     SaScreenshot,
     SaAni,
     'Animation of Me Holding My Dog',
-    'https://github.com/SamanGriffiths47/Simple-Additions'
+    'https://github.com/samanhg47/Simple-Additions'
   )
 
   const hailGaming = new Project(
@@ -68,7 +68,7 @@ function App(props) {
     HgScreenshot,
     HgAni,
     'Animation of Me Gaming',
-    'https://github.com/SamanGriffiths47/Hail'
+    'https://github.com/samanhg47/Hail'
   )
 
   const resourceFull = new Project(
@@ -76,7 +76,7 @@ function App(props) {
     RfScreenshot,
     RfAni,
     'Animation of Me Reading',
-    'https://github.com/SamanGriffiths47/Resource_Full'
+    'https://github.com/samanhg47/Resource_Full'
   )
 
   const tmdbLibrary = new Project(
@@ -84,7 +84,7 @@ function App(props) {
     TlScreenshot,
     TlAni,
     'Animation of Me Eating Popcorn',
-    'https://github.com/SamanGriffiths47/TMDB-Search'
+    'https://github.com/samanhg47/TMDB-Search'
   )
 
   const tmdbReThunk = new Project(
@@ -92,7 +92,7 @@ function App(props) {
     TrScreenshot,
     TrAni,
     'Animation of Me Watching Movies',
-    'https://github.com/SamanGriffiths47/TMDB-ReThunk'
+    'https://github.com/samanhg47/TMDB-ReThunk'
   )
 
   const pieces = [
