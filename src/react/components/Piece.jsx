@@ -17,6 +17,9 @@ export default function Piece (props){
       e.target.children[0].style.pointerEvents='none'
     }
   }
+  function linkClick(e){
+    e.target.parentElement.style.opacity = 0
+  }
 
   return(
     <div className='pieceCont'>
@@ -25,7 +28,7 @@ export default function Piece (props){
         <img src={piece.img} alt={imgalt} />
         <div className='linkDiv'>
           <section onMouseOver={mouseOver} onMouseOut={mouseOut} >
-            <a href={piece.link} rel="noreferrer" target='_blank'>More Info Here</a>
+            <a href={piece.link} onClick={linkClick} rel="noreferrer" target='_blank'>More Info Here</a>
           </section>
         </div>
       </section>
@@ -47,9 +50,9 @@ export function PieceMobile (props){
       }
     }
   }
-  // function onBlur(e){
-  //   e.target.style.opacity = 1
-  // }
+  function linkClick(e){
+    e.target.parentElement.style.opacity = 0
+  }
 
   return(
     <div className='pieceCont'>
@@ -58,7 +61,7 @@ export function PieceMobile (props){
         <img src={piece.img} alt={imgalt} />
       <div className='linkDiv'>
         <section onClick={onClick}>
-        <a href={piece.link} rel="noreferrer" target='_blank' >More Info Here</a>
+        <a href={piece.link} onClick={linkClick} rel="noreferrer" target='_blank' >More Info Here</a>
         </section>
       </div>
       </section>

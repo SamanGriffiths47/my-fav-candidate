@@ -83,15 +83,15 @@ function App(props) {
     'TMDB Library',
     TlScreenshot,
     TlAni,
-    'Animation of Me Eating Popcorn',
-    'https://github.com/samanhg47/TMDB-Search'
+    'Animation of Me As Popcorn',
+    'https://github.com/samanhg47/TMDB-Library'
   )
 
   const tmdbReThunk = new Project(
     'TMDB ReThunk',
     TrScreenshot,
     TrAni,
-    'Animation of Me Watching Movies',
+    'Animation of Me Trapped In TV',
     'https://github.com/samanhg47/TMDB-ReThunk'
   )
 
