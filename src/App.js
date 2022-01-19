@@ -48,7 +48,7 @@ function App(props) {
     'Animation of Me In Space',
     'https://github.com/samanhg47/Asteroid_Juggler',
     'https://asteroid-juggler.surge.sh/',
-    'In coding this game, I relied heavily upon object-oriented programming, capitalizing on the repetitive nature of animation.'.concat(
+    'With Vanilla JS, I relied heavily upon object-oriented programming, capitalizing on the repetitive nature of animation.'.concat(
       ' The trigonometry equations that I built into the Vector class as functions increased the ease of creating smooth'.concat(
         " motion and collision graphics. As for the CSS, I went for a '70s arcade style, employing TTF files".concat(
           ' to import a techno font befitting the times.'
@@ -64,7 +64,7 @@ function App(props) {
     'Animation of Me Playing Tic Tac Toe',
     'https://github.com/samanhg47/Tick-Tac-Toe',
     'http://tick-tac-toe.surge.sh/',
-    "Here I utilized the D.O.M. to build a fun and engaging U.X. I created a nested array to map the player's moves along the gameboard".concat(
+    "I utilized the D.O.M. to build a fun and engaging U.X. with Vanilla JS. I created a nested array to map the player's moves along the gameboard".concat(
       " and implemented recursive algorithms to drive the game logic. You'll also see that I used nested functions, following the".concat(
         ' D.R.Y. principle, to create a presentable and readable codebase.'
       )
@@ -78,9 +78,9 @@ function App(props) {
     'Animation of Me Holding My Dog',
     'https://github.com/samanhg47/Simple-Additions',
     'https://simple-additions.netlify.app/',
-    'On this project, I employed a mix of Cors middleware, JSON web tokens, and regex to secure my RESTful'.concat(
-      ' API. I also deployed AWS and GCP to export workload and store data. On the frontend, I took advantage'.concat(
-        ' of the enhanced state management and routing of Nuxt.js with the added bonus of creating an isomorphic application.'
+    'On this project, I employed a mix of Cors middleware, JSON web tokens, and regex to secure the RESTful'.concat(
+      ' API that I built with Flask, SQLAlchemy, and PostgreSQL. I also deployed AWS and GCP to export workload and store data. On the frontend, I took advantage'.concat(
+        ' of the enhanced state management and routing of Nuxt.js with the bonus of creating an isomorphic application.'
       )
     )
   )
@@ -124,7 +124,13 @@ function App(props) {
     'Animation of Me As Popcorn',
     'https://github.com/samanhg47/TMDB-Library',
     'https://tmdb-library.vercel.app/',
-    ''
+    'For my first time fetching and displaying data from a database, I chose to have users query the TMDB API. I enjoyed exploring'.concat(
+      ' CSS flexbox for the first time on this project, choosing to let flex-wrap lay out the information as frontend algorithms iterate'.concat(
+        ' over it. This was also my first foray into event listeners,'.concat(
+          ' with which data is displayed as the user interacts with the page.'
+        )
+      )
+    )
   )
 
   const tmdbReThunk = new Project(
@@ -134,7 +140,11 @@ function App(props) {
     'Animation of Me Trapped In TV',
     'https://github.com/samanhg47/TMDB-ReThunk',
     'https://tmdb-rethunk.vercel.app/',
-    ''
+    'My second go at the TMDB API builds a front end U.I. with the help of React.js and Redux Thunk. I toyed with the idea of side-bar'.concat(
+      'navigation, letting users choose from lists of the top movies and TV shows returned from HTTP calls made with the Axios library.'.concat(
+        "I utilized Redux's state management abilities to let the user leave ratings for each show."
+      )
+    )
   )
 
   const pieces = [
