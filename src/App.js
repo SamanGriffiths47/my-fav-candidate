@@ -30,12 +30,14 @@ function App(props) {
   const bckgrndVid = styles.backgroundVid
 
   class Project {
-    constructor(name, img, animation, aniAlt, link) {
+    constructor(name, img, animation, aniAlt, github, deployment, about) {
       this.name = name
       this.img = img
       this.animation = animation
       this.aniAlt = aniAlt
-      this.link = link
+      this.github = github
+      this.deployment = deployment
+      this.about = about
     }
   }
 
@@ -44,7 +46,13 @@ function App(props) {
     AjScreenshot,
     AjAni,
     'Animation of Me In Space',
-    'https://github.com/samanhg47/Asteroid_Juggler'
+    'https://github.com/samanhg47/Asteroid_Juggler',
+    'https://asteroid-juggler.surge.sh/',
+    'In coding this game, I relied heavily upon the use of object-oriented programming to capitalize on the repetitive nature of animation.'.concat(
+      ' I also built trigonometry equations into a Vector class as functions to increase the ease of creating smooth'.concat(
+        ' motion and collision graph.'
+      )
+    )
   )
 
   const tickTacToe = new Project(
@@ -52,7 +60,9 @@ function App(props) {
     TttScreenshot,
     TttAni,
     'Animation of Me Playing Tic Tac Toe',
-    'https://github.com/samanhg47/Tick-Tac-Toe'
+    'https://github.com/samanhg47/Tick-Tac-Toe',
+    'http://tick-tac-toe.surge.sh/',
+    ''
   )
 
   const simpleAdditions = new Project(
@@ -60,7 +70,9 @@ function App(props) {
     SaScreenshot,
     SaAni,
     'Animation of Me Holding My Dog',
-    'https://github.com/samanhg47/Simple-Additions'
+    'https://github.com/samanhg47/Simple-Additions',
+    'https://simple-additions.netlify.app/',
+    ''
   )
 
   const hailGaming = new Project(
@@ -68,7 +80,9 @@ function App(props) {
     HgScreenshot,
     HgAni,
     'Animation of Me Gaming',
-    'https://github.com/samanhg47/Hail'
+    'https://github.com/samanhg47/Hail',
+    'https://hail-gaming.herokuapp.com/',
+    ''
   )
 
   const resourceFull = new Project(
@@ -76,7 +90,9 @@ function App(props) {
     RfScreenshot,
     RfAni,
     'Animation of Me Reading',
-    'https://github.com/samanhg47/Resource_Full'
+    'https://github.com/samanhg47/Resource_Full',
+    'https://resource-full.herokuapp.com/',
+    ''
   )
 
   const tmdbLibrary = new Project(
@@ -84,7 +100,9 @@ function App(props) {
     TlScreenshot,
     TlAni,
     'Animation of Me As Popcorn',
-    'https://github.com/samanhg47/TMDB-Library'
+    'https://github.com/samanhg47/TMDB-Library',
+    'https://tmdb-library.vercel.app/',
+    ''
   )
 
   const tmdbReThunk = new Project(
@@ -92,7 +110,9 @@ function App(props) {
     TrScreenshot,
     TrAni,
     'Animation of Me Trapped In TV',
-    'https://github.com/samanhg47/TMDB-ReThunk'
+    'https://github.com/samanhg47/TMDB-ReThunk',
+    'https://tmdb-rethunk.vercel.app/',
+    ''
   )
 
   const pieces = [

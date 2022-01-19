@@ -29,9 +29,8 @@ export default function MyStory (props){
                 <h1>Who I Was</h1>
                 <p>
                   I had an admittedly rough start. I was adopted at two years old by a Caucasian, lesbian couple, which obviously contributed
-                  to a... unique experience growing up. I love them and my brother (by blood:we were a package deal, haha) more than anything else
-                  in this life. That said, my lack of role models (both male and black) led me down a confusing path, which ultimately had me
-                  being an active gang member and drug dealer. Only when I began to work, at the age of sixteen, did I receive the mentorship I needed
+                  to a... unique experience growing up. I love them and my brother (by blood: we were a package deal, haha) more than anything else
+                  in this life. That said, my lack of role models (both male and black) led me down a confusing path. Only when I began to work, at the age of sixteen, did I receive the mentorship I needed
                   to start to mature into a man of substance. I've always bugged my managers into taking me under their wings, haha. Because of
                   this, I gained the skills necessary to be given a managerial title in the restaurant industry by nineteen years old. A title I maintained
                   until my recent pilgrimage into the tech industry.

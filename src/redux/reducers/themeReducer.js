@@ -15,15 +15,7 @@ const iState = {
       reason:
         "I've spent the past 7 years of my life working in the restaurant industry," +
         ' one heavily reliant on the ability of the employees to work harmoniously as a team.',
-      lvl: 86,
-      seen: false
-    },
-    {
-      title: 'Learning',
-      reason:
-        'My old boss nicknamed me sponge because of my aptitude for learning, haha! While it is a funny' +
-        ' situation, it does go to show my history of being adaptable, and astute.',
-      lvl: 92,
+      lvl: 98,
       seen: false
     },
     {
@@ -34,7 +26,7 @@ const iState = {
         ` and public speaker. I do, however, have a slight tendency to "overshare." Some people like it,` +
         ` some don't. I just know that I'd rather receive too much information from my team than too` +
         ` little, so I try to give my teamates that same courtesy.`,
-      lvl: 78,
+      lvl: 94,
       seen: false
     },
     {
@@ -44,6 +36,14 @@ const iState = {
         " I enter. No one deserves to work at a job that depresses them, with coworkers they can't stand." +
         ' Most of the time, we see our coworkers more than our family members. I wholeheartedly believe that' +
         ' those relationships deserve effort and attention!',
+      lvl: 100,
+      seen: false
+    },
+    {
+      title: 'Learning',
+      reason:
+        'My old boss nicknamed me sponge because of my aptitude for learning, haha! While it is a funny' +
+        ' situation, it does go to show my history of being adaptable, and astute.',
       lvl: 96,
       seen: false
     },
@@ -93,7 +93,7 @@ const iState = {
       '--sunOp': '0',
       '--rayH': '3vh',
       // Project Display
-      '--hoverOver': 'rgba(0, 0, 0, 0.7)',
+      '--hoverOver': 'rgba(0, 0, 0, 0.9)',
       // Screenshot Container
       '--pieceBxShdw': '0 0 6vw -2.5vw rgb(255, 255, 255)',
       '--pieceBckgrnd':
@@ -170,7 +170,7 @@ const iState = {
       '--cardBckgrnd': 'rgba(49, 135, 214, 0.3)',
       '--cardColor': 'rgb(255, 191, 0)',
       // Project Display
-      '--hoverOver': 'rgba(255, 255, 255, 0.7)',
+      '--hoverOver': 'rgba(255, 255, 255, 0.9)',
       // Screenshot Container
       '--pieceBxShdw': '0 0 6vw -0.5vw rgb(50, 50, 50)',
       '--pieceBckgrnd':
