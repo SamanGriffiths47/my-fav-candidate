@@ -110,7 +110,7 @@ function Home(props){
             bounding.top >= 0 &&
             bounding.left >= 0 &&
             bounding.right <= window.innerWidth &&
-            bounding.bottom <= (window.innerHeight + 17)
+            bounding.bottom <= window.innerHeight + 17
           ) {
             props.seen(i)
             level.style.width = 'var(--lvl)'

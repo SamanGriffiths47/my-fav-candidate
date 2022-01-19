@@ -28,8 +28,8 @@ export default function Projects(props){
                   piece={piece}
                 />
                 {mobileCheck 
-                ?<PieceMobile key={`project${i}`} styles={styles} piece={piece} />
-                :<Piece key={`project${i}`} styles={styles} piece={piece} />
+                ?<PieceMobile key={`project${i}`} styles={styles} piece={piece} index={i} />
+                :<Piece key={`project${i}`} styles={styles} piece={piece} index={i} />
                 }
               </section>
             )
@@ -37,8 +37,8 @@ export default function Projects(props){
             return (
               <section key={`animation${i}`} className='pRow'>
                 {mobileCheck 
-                ?<PieceMobile key={`project${i}`} styles={styles} piece={piece} />
-                :<Piece key={`project${i}`} styles={styles} piece={piece} />
+                ?<PieceMobile key={`project${i}`} styles={styles} index={i} piece={piece} />
+                :<Piece key={`project${i}`} styles={styles} index={i} piece={piece} />
                 }
                 <Animation
                   piece={piece}

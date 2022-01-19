@@ -48,9 +48,11 @@ function App(props) {
     'Animation of Me In Space',
     'https://github.com/samanhg47/Asteroid_Juggler',
     'https://asteroid-juggler.surge.sh/',
-    'In coding this game, I relied heavily upon the use of object-oriented programming to capitalize on the repetitive nature of animation.'.concat(
-      ' I also built trigonometry equations into a Vector class as functions to increase the ease of creating smooth'.concat(
-        ' motion and collision graph.'
+    'In coding this game, I relied heavily upon object-oriented programming, capitalizing on the repetitive nature of animation.'.concat(
+      ' The trigonometry equations that I built into the Vector class as functions increased the ease of creating smooth'.concat(
+        " motion and collision graphics. As for the CSS, I went for a '70s arcade style, employing TTF files".concat(
+          ' to import a techno font befitting the times.'
+        )
       )
     )
   )
@@ -62,7 +64,11 @@ function App(props) {
     'Animation of Me Playing Tic Tac Toe',
     'https://github.com/samanhg47/Tick-Tac-Toe',
     'http://tick-tac-toe.surge.sh/',
-    ''
+    "Here I utilized the D.O.M. to build a fun and engaging U.X. I created a nested array to map the player's moves along the gameboard".concat(
+      " and implemented recursive algorithms to drive the game logic. You'll also see that I used nested functions, following the".concat(
+        ' D.R.Y. principle, to create a presentable and readable codebase.'
+      )
+    )
   )
 
   const simpleAdditions = new Project(
@@ -72,7 +78,11 @@ function App(props) {
     'Animation of Me Holding My Dog',
     'https://github.com/samanhg47/Simple-Additions',
     'https://simple-additions.netlify.app/',
-    ''
+    'On this project, I employed a mix of Cors middleware, JSON web tokens, and regex to secure my RESTful'.concat(
+      ' API. I also deployed AWS and GCP to export workload and store data. On the frontend, I took advantage'.concat(
+        ' of the enhanced state management and routing of Nuxt.js with the added bonus of creating an isomorphic application.'
+      )
+    )
   )
 
   const hailGaming = new Project(
@@ -82,7 +92,15 @@ function App(props) {
     'Animation of Me Gaming',
     'https://github.com/samanhg47/Hail',
     'https://hail-gaming.herokuapp.com/',
-    ''
+    'I embarked upon this PERN stack coding journey with the help of two friends, <a class="a1" rel="noreferrer"'.concat(
+      ' target="_blank" href="https://github.com/Zitai01">Zitai Huang</a> and <a class="a1" rel="noreferrer"'.concat(
+        ' target="_blank" href="https://github.com/robertthome">Robert Thome</a>. I led the team to make sure'.concat(
+          ' we met MVP by our deadline of 5 days and leveraged GitHub for version control to create, merge, and'.concat(
+            ' sometimes rebase our branches and main repository. This project was a great team-building experience for all of us!'
+          )
+        )
+      )
+    )
   )
 
   const resourceFull = new Project(
@@ -92,7 +110,11 @@ function App(props) {
     'Animation of Me Reading',
     'https://github.com/samanhg47/Resource_Full',
     'https://resource-full.herokuapp.com/',
-    ''
+    'I created this full-stack blog site with the use of the MERN stack. Mongoose ORM helped me design my MongoDB database'.concat(
+      " with an easily iterable structure to optimize it's integration with frontend algorithms. With the help of the React-Boot".concat(
+        'strap library, I conveyed my data in a way that reflects the sleek and modern design of most social media sites today.'
+      )
+    )
   )
 
   const tmdbLibrary = new Project(

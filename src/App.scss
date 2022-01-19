@@ -285,7 +285,7 @@ nav {
   opacity: 0;
   background-color: var(--hoverOver);
   display: grid;
-  grid-template: 75% 25% / 1fr 1fr;
+  grid-template: auto 1fr / 1fr 1fr;
   height: 100%;
   width: 100%;
   position: absolute;
@@ -294,10 +294,12 @@ nav {
 .linkDiv > section > * {
   width: fit-content;
 }
+.linkDiv > section a {
+  pointer-events: none;
+}
 .github {
   grid-area: 2/1/3/2;
-  pointer-events: none;
-  align-self: start;
+  align-self: center;
   justify-self: right;
   font-size: 2.7vw;
   margin: 0;
@@ -305,21 +307,22 @@ nav {
 }
 .deployment {
   grid-area: 2/2/3/3;
-  pointer-events: none;
-  align-self: start;
+  align-self: center;
   justify-self: left;
   font-size: 2.7vw;
   margin: 0;
   margin-left: 6vw;
 }
 .pieceAbout {
+  display: inline-block;
+  height: fit-content;
   grid-area: 1/1/2/3;
   text-shadow: 0 0 1vh var(--iconBxShdw);
-  margin: auto 2.5vw;
+  margin: 1.5vw 2.5vw 0 2.5vw;
   text-align: justify;
   align-self: start;
   justify-self: center;
-  text-indent: 2vw;
+  text-indent: 3vw;
 }
 
 /* Piece Animation */
