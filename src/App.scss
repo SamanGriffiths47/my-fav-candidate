@@ -196,9 +196,6 @@ nav {
 #projectPieces > li {
   width: calc(var(--navTxt) * 8);
   height: calc(var(--navTxt) * 2);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   cursor: pointer;
 }
 #projectPieces > li:hover {
@@ -207,6 +204,11 @@ nav {
 #projectPieces > li > a {
   text-decoration: none;
   color: var(--textColor) !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+  width: inherit;
 }
 #projectPieces > li > a:hover {
   color: var(--textColor) !important;

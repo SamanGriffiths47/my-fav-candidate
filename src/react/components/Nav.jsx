@@ -31,6 +31,8 @@ function Nav(props){
   function projectDropDown (e){
     e.type === 'blur'
     ? setProjectShow(false)
+    : projectShow
+    ? setProjectShow(false)
     : setProjectShow(true)
   }
 
@@ -66,7 +68,7 @@ function Nav(props){
           aria-expanded={projectShow}
         >
           <label htmlFor="projectPieces">
-            <Link onFocus={(e)=>projectDropDown(e)} onBlur={(e)=>projectDropDown(e)} to="/projects" id="navProjects">
+            <Link onClick={(e)=>projectDropDown(e)} onBlur={(e)=>projectDropDown(e)} to="/projects" id="navProjects">
               Projects
             </Link>
           </label>
@@ -76,7 +78,7 @@ function Nav(props){
                 <li
                   key={i}
                 >
-                  <a href={`#p${i}`}>{piece.name}</a>
+                  <a className='linkA' href={`#p${i}`}>{piece.name}</a>
                 </li>
               ))}
             </ul>
