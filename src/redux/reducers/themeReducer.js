@@ -85,10 +85,10 @@ const iState = {
       // Theme Icon
       '--iconBxShdw': 'rgb(157,157,157)',
       '--iconMargin': window.chrome
-        ? '0 calc(2vh + 3vw) 0 0'
+        ? '0 calc(2vh + 2.5vw) 0 0'
         : /Safari/.test(navigator.userAgent)
-        ? '0 0 0 calc(-2vh - 3vw)'
-        : '0 calc(2vh + 3vw) 0 0',
+        ? '0 0 0 calc(-2vh - 2.5vw)'
+        : '0 calc(2vh + 2.5vw) 0 0',
       '--moonOp': '1',
       '--sunOp': '0',
       '--rayH': '3vh',

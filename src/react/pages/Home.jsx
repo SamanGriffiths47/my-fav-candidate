@@ -1,10 +1,6 @@
 import { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { seen } from '../../redux/actions/themeActions'
-// import greeting from '../../images/animations/hello.png'
-import greeting1 from '../../images/animations/gm.png'
-import greeting2 from '../../images/animations/ga.png'
-import greeting3 from '../../images/animations/ge.png'
 
 // front-end
 import css from '../../images/pokebadges/css.png'
@@ -56,7 +52,6 @@ const mapDispatchToProps = (dispatch) => {
 
 function Home(props){
   const TOD = props.themeState.TOD
-  const greeting = /morning/.test(TOD) ? greeting1 : /afternoon/.test(TOD) ? greeting2 : greeting3
   const attributes = props.themeState.attributes
 
   const pokeBadges = {

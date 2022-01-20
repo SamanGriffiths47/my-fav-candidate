@@ -92,8 +92,8 @@ function App(props) {
     'Animation of Me Gaming',
     'https://github.com/samanhg47/Hail',
     'https://hail-gaming.herokuapp.com/',
-    'I embarked upon this PERN stack coding journey with the help of two friends, <a class="a1" rel="noreferrer"'.concat(
-      ' target="_blank" href="https://github.com/Zitai01">Zitai Huang</a> and <a class="a1" rel="noreferrer"'.concat(
+    'I embarked upon this PERN stack coding journey with the help of two friends, <a class="infoA a1" rel="noreferrer"'.concat(
+      ' target="_blank" href="https://github.com/Zitai01">Zitai Huang</a> and <a class="infoA a1" rel="noreferrer"'.concat(
         ' target="_blank" href="https://github.com/robertthome">Robert Thome</a>. I led the team to make sure'.concat(
           ' we met MVP by our deadline of 5 days and leveraged GitHub for version control to create, merge, and'.concat(
             ' sometimes rebase our branches and main repository. This project was a great team-building experience for all of us!'
