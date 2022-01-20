@@ -166,22 +166,20 @@ nav {
   z-index: 4;
 }
 /* ReCaptcha */
-.recapDiv {
+.dropDownDiv {
   grid-area: 1/1/2/2;
-  overflow-x: scroll;
-  overflow-y: visible;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: flex-end;
   width: 100%;
-  height: auto;
-  position: absolute;
+  height: 8vh;
+  position: relative;
 }
-.recapDiv * {
+.recapDiv div {
   position: relative;
   z-index: 2;
-  overflow-x: scroll;
-  overflow-y: visible;
+  height: 76px !important;
+  width: 302px !important;
 }
 /* Theme Slider */
 #btnSec {

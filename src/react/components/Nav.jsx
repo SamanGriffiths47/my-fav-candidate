@@ -24,30 +24,34 @@ function Nav(props){
     : props.initLightMode()
   }
 
-  const [margin, setMargin] = useState('-8%')
+  const [margin, setMargin] = useState('0')
 
   function onClick (e){
     e.preventDefault()
-    margin === '10vh' ? setMargin('-8%') : setMargin('10vh')
+    margin === '0' ? setMargin('90px') : setMargin('0')
   }
 
   const reCaptchaCallback = (token) => {
     if (token) {
-      setMargin('-8%')
+      setMargin('0')
       window.location.href = 'https://drive.google.com/file/d/1MaqfsDgvvbucTknPKiDosgyy-9PSD58q/view?usp=sharing'
     }
   }
 
   return(
     <nav id="navbar">
-      <div className="recapDiv">
+      <div style={{marginTop: margin}} className="dropDownDiv recapDiv">
         < ReCAPTCHA
-        style={{marginTop: margin}}
         theme='dark'
         sitekey={process.env.REACT_APP_RECAPTCHA_KEY}
         onChange={reCaptchaCallback}
         />
       </div>
+      {/* <div id='dropDown'>
+        {props.pieces.map(piece =>(
+          <p>{piece.name}</p>
+        ))}
+      </div> */}
       <section id='linkSec'>
         <Link to="/" id="navHome">
           Home

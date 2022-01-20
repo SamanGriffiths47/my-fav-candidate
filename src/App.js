@@ -162,7 +162,7 @@ function App(props) {
       id="appDiv"
       style={{ ...styles.var, '--winWid': `${document.body.clientWidth}` }}
     >
-      <Nav styles={styles} {...props} />
+      <Nav pieces={pieces} styles={styles} {...props} />
       <div id="background">
         {[1, 1, 1, 1].map((video, i) => (
           <video

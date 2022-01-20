@@ -17,8 +17,7 @@ export default function Projects(props){
                 mobileCheck
                 ? 'Touch'
                 : 'Hover Over'
-              } The Screenshots For More Information
-            )
+              } The Screenshots For More Information)
           </h1>
         {pieces.map((piece, i) => {
           if (i % 2 > 0) {
