@@ -6,6 +6,7 @@ import moonIcon from '../../images/moonIcon.png'
 import sunRays from '../../images/sunRayIcon.png'
 import ReCAPTCHA from "react-google-recaptcha-enterprise"
 import { useState } from 'react'
+import { Collapse } from 'react-bootstrap'
 
 const mapStateToProps = ({ themeState }) => {
   return { themeState }
@@ -25,6 +26,13 @@ function Nav(props){
   }
 
   const [margin, setMargin] = useState('0')
+  const [projectShow, setProjectShow] = useState(false)
+
+  function projectDropDown (e){
+    e.type === 'blur'
+    ? setProjectShow(false)
+    : setProjectShow(true)
+  }
 
   function onClick (e){
     e.preventDefault()
@@ -40,25 +48,40 @@ function Nav(props){
 
   return(
     <nav id="navbar">
-      <div style={{marginTop: margin}} className="dropDownDiv recapDiv">
+      <div id='reCaptchaDD' style={{marginTop: margin}} className="DDDiv">
         < ReCAPTCHA
         theme='dark'
         sitekey={process.env.REACT_APP_RECAPTCHA_KEY}
         onChange={reCaptchaCallback}
         />
       </div>
-      {/* <div id='dropDown'>
-        {props.pieces.map(piece =>(
-          <p>{piece.name}</p>
-        ))}
-      </div> */}
       <section id='linkSec'>
         <Link to="/" id="navHome">
           Home
         </Link>
-        <Link to="/projects" id="navProjects">
-          Projects
-        </Link>
+        <div
+          id="projectsDD"
+          className="hasBootstrap"
+          aria-controls="projectPieces"
+          aria-expanded={projectShow}
+        >
+          <label htmlFor="projectPieces">
+            <Link onFocus={(e)=>projectDropDown(e)} onBlur={(e)=>projectDropDown(e)} to="/projects" id="navProjects">
+              Projects
+            </Link>
+          </label>
+          <Collapse in={projectShow}>
+            <ul id="projectPieces">
+              {props.pieces.map((piece, i) => (
+                <li
+                  key={i}
+                >
+                  <a href={`#p${i}`}>{piece.name}</a>
+                </li>
+              ))}
+            </ul>
+          </Collapse>
+        </div>
         <button
         onClick={onClick}
         id="resume">

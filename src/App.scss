@@ -80,7 +80,7 @@ body {
 }
 * {
   transition: 0.5s all, 0s font-size;
-  color: var(--textColor);
+  color: var(--textColor) !important;
 }
 #appDiv {
   height: 100vh;
@@ -94,7 +94,6 @@ main {
   overflow-y: scroll;
   display: flex;
   align-items: center;
-  color: white;
   width: 100%;
   height: 100%;
 }
@@ -134,12 +133,12 @@ a,
 a:hover,
 #resume:hover {
   text-shadow: 0 0 1.5vh var(--aShadow);
-  color: var(--aHover);
+  color: var(--aHover) !important;
 }
 a:active,
 #resume:active {
   text-shadow: 0 0 4vh var(--aShadow);
-  color: var(--aActive);
+  color: var(--aActive) !important;
 }
 
 /* Nav Bar */
@@ -165,17 +164,65 @@ nav {
   position: relative;
   z-index: 4;
 }
-/* ReCaptcha */
-.dropDownDiv {
+/* Drop Down Menus */
+.DDDiv {
   grid-area: 1/1/2/2;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  width: 100%;
-  height: 8vh;
+  height: fit-content;
   position: relative;
 }
-.recapDiv div {
+// Project Selector
+#projectsDD {
+  display: flex;
+  width: calc(var(--navTxt) * 3.6);
+  align-self: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+#projectsDD > label {
+  height: 8vh;
+  display: flex;
+  align-items: center;
+}
+#projectPieces {
+  width: fit-content;
+  flex-direction: column;
+  padding: 1vw;
+  list-style-type: none;
+  margin: 0;
+  background-color: var(--hoverOver);
+}
+#projectPieces > li {
+  width: calc(var(--navTxt) * 8);
+  height: calc(var(--navTxt) * 2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#projectPieces > li:hover {
+  background: var(--infoBckgrnd);
+}
+#projectPieces > li > a {
+  text-decoration: none;
+  color: var(--textColor) !important;
+}
+#projectPieces > li > a:hover {
+  color: var(--textColor) !important;
+}
+#projectPieces > li > a:active {
+  color: var(--textColor) !important;
+}
+
+/* ReCaptcha */
+#reCaptchaDD {
+  width: 100%;
+  overflow: visible;
+  align-items: flex-end;
+  height: 8vh;
+}
+#reCaptchaDD div {
   position: relative;
   z-index: 2;
   height: 76px !important;
@@ -429,7 +476,7 @@ nav {
   margin-bottom: 0;
 }
 .l0 {
-  animation: load 1.58s linear;
+  animation: load 1.54s linear;
   animation-iteration-count: 1;
 }
 .l1 {
@@ -441,7 +488,7 @@ nav {
   animation-iteration-count: 1;
 }
 .l3 {
-  animation: load 1.54s linear;
+  animation: load 1.58s linear;
   animation-iteration-count: 1;
 }
 .l4 {

@@ -18,7 +18,7 @@ export default function Piece (props){
   })
 
   return(
-    <div className={`pieceCont p${props.index}`}>
+    <div className='pieceCont'>
       <h1 className="imgTitle">{piece.name}</h1>
       <section className='pieceImg'>
         <img src={piece.img} alt={imgalt} />
@@ -55,7 +55,7 @@ export function PieceMobile (props){
   })
 
   return(
-    <div className={`pieceCont p${props.index}`}>
+    <div  className='pieceCont'>
       <h1 className="imgTitle">{piece.name}</h1>
       <section className='pieceImg'>
         <img src={piece.img} alt={imgalt} />

@@ -22,7 +22,7 @@ export default function Projects(props){
         {pieces.map((piece, i) => {
           if (i % 2 > 0) {
             return (
-              <section key={`animation${i}`} className='pRow'>
+              <section id={`p${i}`} key={`animation${i}`} className='pRow'>
                 <Animation
                   piece={piece}
                 />
@@ -34,7 +34,7 @@ export default function Projects(props){
             )
           } else {
             return (
-              <section key={`animation${i}`} className='pRow'>
+              <section id={`p${i}`} key={`animation${i}`} className='pRow'>
                 {mobileCheck 
                 ?<PieceMobile key={`project${i}`} styles={styles} index={i} piece={piece} />
                 :<Piece key={`project${i}`} styles={styles} index={i} piece={piece} />

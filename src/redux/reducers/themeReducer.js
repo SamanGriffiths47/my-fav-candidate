@@ -15,7 +15,7 @@ const iState = {
       reason:
         "I've spent the past 7 years of my life working in the restaurant industry," +
         ' one heavily reliant on the ability of the employees to work harmoniously as a team.',
-      lvl: 98,
+      lvl: 96,
       seen: false
     },
     {
@@ -44,7 +44,7 @@ const iState = {
       reason:
         'My old boss nicknamed me sponge because of my aptitude for learning, haha! While it is a funny' +
         ' situation, it does go to show my history of being adaptable, and astute.',
-      lvl: 96,
+      lvl: 98,
       seen: false
     },
     {
