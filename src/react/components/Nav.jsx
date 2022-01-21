@@ -5,7 +5,7 @@ import sunIcon from '../../images/sunIcon.png'
 import moonIcon from '../../images/moonIcon.png'
 import sunRays from '../../images/sunRayIcon.png'
 import ReCAPTCHA from "react-google-recaptcha-enterprise"
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { Collapse } from 'react-bootstrap'
 
 const mapStateToProps = ({ themeState }) => {
@@ -46,7 +46,6 @@ function Nav(props){
     }
   }
   function recapClick(){
-    console.log('RECAP CLICK')
     document.getElementById('contactMe').focus()
   }
   function contactClick (e){
@@ -58,7 +57,6 @@ function Nav(props){
     }
   }
   function contactBlur (){
-    console.log('BLUR')
     setContactShow(false)
   }
 
@@ -67,13 +65,15 @@ function Nav(props){
       setTimeout(()=>{
         setValidated(true)
         setMargin('0')
-        if (recaptcha === 'resume'){
-          window.location.href = 'https://drive.google.com/file/d/1SCzW8LAzUO-smNY8q4UUSDGyM7VMv4wM/view?usp=sharing'
-        } else if (recaptcha === 'contacts'){
-          document.getElementById('contactMe').focus()
-          setContactShow(true)
-        }
-      },1100)
+        setTimeout(()=>{
+          if (recaptcha === 'resume'){
+            window.location.href = 'https://drive.google.com/file/d/1SCzW8LAzUO-smNY8q4UUSDGyM7VMv4wM/view?usp=sharing'
+          } else if (recaptcha === 'contacts'){
+            document.getElementById('contactMe').focus()
+            setContactShow(true)
+          }
+        }, 700)
+      }, 1000)
     }
   }
 
