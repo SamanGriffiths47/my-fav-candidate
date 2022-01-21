@@ -41,7 +41,7 @@ function Nav(props){
     e.preventDefault()
     setRecaptcha('resume')
     if(validated){
-      window.location.href = 'https://drive.google.com/file/d/1MaqfsDgvvbucTknPKiDosgyy-9PSD58q/view?usp=sharing'
+      window.location.href = 'https://drive.google.com/file/d/1SCzW8LAzUO-smNY8q4UUSDGyM7VMv4wM/view?usp=sharing'
     } else {
       margin === '0' ? setMargin('90px') : setMargin('0')
     }
@@ -63,7 +63,7 @@ function Nav(props){
     if (token) {
       setMargin('0')
       setValidated(true)
-      recaptcha === 'resume' && (window.location.href = 'https://drive.google.com/file/d/1MaqfsDgvvbucTknPKiDosgyy-9PSD58q/view?usp=sharing')
+      recaptcha === 'resume' && (window.location.href = 'https://drive.google.com/file/d/1SCzW8LAzUO-smNY8q4UUSDGyM7VMv4wM/view?usp=sharing')
       recaptcha === 'contacts' && setContactShow(true)
     }
   }
