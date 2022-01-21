@@ -157,6 +157,11 @@ function App(props) {
     tmdbLibrary
   ]
 
+  function emailSecClick(e) {
+    e.target.tagName === 'SECTION' &&
+      (document.getElementById('emailSec').style.display = 'none')
+  }
+
   return (
     <div
       id="appDiv"
@@ -184,6 +189,33 @@ function App(props) {
           render={(props) => <Projects pieces={pieces} {...props} />}
         />
       </main>
+      <section id="emailSec" onClick={emailSecClick}>
+        <form
+          id="emailForm"
+          action="https://formsubmit.co/samanhg47@gmail.com"
+          method="POST"
+        >
+          <input
+            className="emailInp"
+            type="email"
+            name="email"
+            id="emailAddy"
+            placeholder="your@email.com"
+            required
+          />
+          <textarea
+            className="emailInp"
+            id="emailBody"
+            type="text"
+            name="name"
+            placeholder="Your message here"
+            required
+          ></textarea>
+          <button id="emailBtn" type="submit">
+            Send
+          </button>
+        </form>
+      </section>
     </div>
   )
 }
