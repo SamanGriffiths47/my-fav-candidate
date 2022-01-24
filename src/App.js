@@ -86,7 +86,7 @@ function App(props) {
   )
 
   const hailGaming = new Project(
-    'Hail Gaming Blog',
+    'Hail: Gaming Blog',
     HgScreenshot,
     HgAni,
     'Animation of Me Gaming',
