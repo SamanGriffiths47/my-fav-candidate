@@ -160,7 +160,7 @@ function Home(props){
         <MyStory/>
       </section>
       <section id='pokeBadges'>
-        <h2>Technological Proficiencies</h2>
+        <h2>Familiar Technologies</h2>
         <h5>(AKA: Pokemon Badges)</h5>
         {Object.keys(pokeBadges).map((cat, i) => {
           return (
