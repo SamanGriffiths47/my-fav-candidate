@@ -33,7 +33,7 @@ function Nav(props){
 
   function projectDropDown (e){
     e.type === 'blur'
-    ? setProjectShow(false)
+    ? setTimeout(()=>{setProjectShow(false)},100)
     : setProjectShow(!projectShow)
   }
 
@@ -57,7 +57,7 @@ function Nav(props){
     }
   }
   function contactBlur (){
-    setContactShow(false)
+    setTimeout(()=>{setContactShow(false)},100)
   }
 
   const reCaptchaCallback = (token) => {
@@ -72,8 +72,8 @@ function Nav(props){
             document.getElementById('contactMe').focus()
             setContactShow(true)
           }
-        }, 700)
-      }, 1000)
+        }, 500)
+      }, 600)
     }
   }
 
