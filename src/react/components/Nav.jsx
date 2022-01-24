@@ -40,7 +40,7 @@ function Nav(props){
   function resumeClick (e){
     setRecaptcha('resume')
     if(validated){
-      window.location.href = 'https://drive.google.com/file/d/1SCzW8LAzUO-smNY8q4UUSDGyM7VMv4wM/view?usp=sharing'
+      window.location.href = 'https://docs.google.com/document/d/1e5i2MIJacd5TDXMTgbEgT_cUHTsMZEK4YpVQ5JXHpag/edit?usp=sharing'
     } else {
       margin === '0' ? setMargin('90px') : setMargin('0')
     }
@@ -67,7 +67,7 @@ function Nav(props){
         setMargin('0')
         setTimeout(()=>{
           if (recaptcha === 'resume'){
-            window.location.href = 'https://drive.google.com/file/d/1SCzW8LAzUO-smNY8q4UUSDGyM7VMv4wM/view?usp=sharing'
+            window.location.href = 'https://docs.google.com/document/d/1e5i2MIJacd5TDXMTgbEgT_cUHTsMZEK4YpVQ5JXHpag/edit?usp=sharing'
           } else if (recaptcha === 'contacts'){
             document.getElementById('contactMe').focus()
             setContactShow(true)
